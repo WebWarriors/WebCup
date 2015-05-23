@@ -2,7 +2,6 @@
 session_start();
 require("includes/functions.php");
 
-<?php
 $gender_fields = array(
     "F" => "Femme",
     "H" => "Homme",
@@ -11,10 +10,11 @@ $gender_fields = array(
 $user_data = find_user_by_id($_SESSION['user_id']);
 foreach($user_data as $data){
     $address = $data['address'];
-    $island = $data['island'];
     $gender = strtr($data['gender'], $gender_fields);
     $phone = $data['phone'];
 }
+
+echo $gender;
 
 if(!empty($_POST['infos'])){
     if(! filter_var($mail, FILTER_VALIDATE_EMAIL))
@@ -31,5 +31,4 @@ if(!empty($_POST['infos'])){
     }
 }
 require("views/account.views.php");
-
 ?>
