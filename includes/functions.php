@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 function set_active($file, $class = "active"){
@@ -79,8 +78,7 @@ if(!function_exists('save_input_data')){
         return $bdd;
     }
 }
-=======
-<?php 
+
 	function set_active($file, $class = "active"){
 		$script = explode('/', $_SERVER['SCRIPT_NAME']);
 		$page = array_pop($script);
@@ -92,4 +90,3 @@ if(!function_exists('save_input_data')){
 		}
 	}
 ?>
->>>>>>> origin/#Dev
