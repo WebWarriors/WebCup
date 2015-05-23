@@ -11,7 +11,7 @@ include('partials/header.php'); ?>
                     <li> Prénom : <?= $_SESSION['f_name'];?> </li>
                     <li> Nom : <?= $_SESSION['l_name'];?> </li>
                     <li> Genre : <?= $gender;?> </li>
-                    <li> Votre île de résidence : <?= $island; ?> </li>
+                    <li> Votre île de résidence : <?= $_SESSION['island']; ?> </li>
                 </p>
 
             </div>
