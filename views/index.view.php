@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("includes/functions.php");
 include('includes/constants.php');
 include('partials/header.php'); ?>
