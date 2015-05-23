@@ -1,6 +1,6 @@
 <?php
 require("includes/functions.php");
-
+session_start();
 //Vérifie le 'submit'
 if(isset($_POST['login'])){
     //Vérifie que les champs ont étés remplis
