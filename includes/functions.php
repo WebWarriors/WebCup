@@ -1,8 +1,22 @@
 <?php
 
+if(!function_exists('get_input')){
+    function get_input($key){
+        return !empty($_SESSION['input'][$key]) ? e($_SESSION['input'][$key]) : null;
+    }
+}
+
+if(!function_exists('e')){
+    function e($string){
+        if($string){
+            return htmlspecialchars($string);
+        }
+    }
+}
+
 if(!function_exists('is_logged_in')){
     function is_logged_in(){
-        return isset($_SESSION['user_id']) || isset($_SESSION['f_name']);
+        return (!empty($_SESSION['user_id']));
     }
 }
 function user_logout($page = "index.php"){
