@@ -2,8 +2,6 @@
 <?php include('includes/constants.php'); ?>
 <?php include('partials/header.php'); ?>
 
-<?php include('partials/footer.php'); ?>
-
 <div class="container">
 	<div class="row">
 		<div class="col s6">
