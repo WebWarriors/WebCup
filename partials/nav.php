@@ -10,7 +10,7 @@
                     <li><a href="logout.php">Déconnexion</a></li>
                 </ul>
                 <?php else: ?>
-                    <li class="<?= set_active('login'); ?>"><a href="login.php">Inscription|Connexion</a></li>
+                    <li class="<?= set_active('login'); ?>"><a href="login.php"><strong>Inscription|Connexion</strong></a></li>
                 </ul>
             <?php endif; ?>
             <ul class="side-nav" id="mobile-demo">
