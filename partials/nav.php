@@ -7,11 +7,13 @@
 	      	</ul>
             <?php if(is_logged_in()): ?>
                 <ul class="right hide-on-med-and-down">
-                <li class="set_active('account')"><a  href="account.php">Réservez-votre place</a></li>
+                <li class="set_active('account')"><a  href="account.php">Mon compte</a></li>
             </ul>
             <?php else: ?>
-              <li class="<?= set_active('login'); ?>"><a href="login.php">Connexion</a></li>
-              <li class="<?= set_active('register'); ?>"><a href="register.php">Inscription</a></li>
+            <ul class="right hide-on-med-and-down">
+              <li class="<?= set_active('login'); ?>"><a href="login.php">Connexion</a></li></ul>
+            <ul class="right hide-on-med-and-down"> 
+              <li class="<?= set_active('register'); ?>"><a href="register.php">Inscription</a></li></ul>
             <?php endif; ?>
 
 	      	<ul id="nav-mobile" class="side-nav">
