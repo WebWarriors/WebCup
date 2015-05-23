@@ -42,12 +42,34 @@
 		<img src="http://lorempixel.com/1080/720/">
 	</div>
 </div>
-
+<!-- Back top Top -->
+<div class="fixed-action-btn back-to-top" style="bottom: 45px; right: 24px;display: none;">
+	<a class="btn-floating btn-large blue">
+		<i class="large mdi-navigation-expand-less"></i>
+	</a>
+</div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="assets/js/materialize.js"></script>
 <script>
 	$(document).ready(function(){
     	$('.parallax').parallax();
-    });
+
+	    var offset = 250;
+	    var duration = 300;
+	    jQuery(window).scroll(function() {
+	        if (jQuery(this).scrollTop() > offset) {
+	            jQuery('.back-to-top').fadeIn(duration);
+	        } else {
+	            jQuery('.back-to-top').fadeOut(duration);
+	        }
+	    });
+
+	    jQuery('.back-to-top').click(function(event) {
+	        event.preventDefault();
+	        jQuery('html, body').animate({scrollTop: 0}, duration);
+	        return false;
+	    })
+	});
+</script>
 </script>
 <?php include('partials/footer.php'); ?>
