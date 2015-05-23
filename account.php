@@ -12,9 +12,9 @@ foreach($user_data as $data){
     $address = $data['address'];
     $gender = strtr($data['gender'], $gender_fields);
     $phone = $data['phone'];
+    $island = $data['island'];
 }
 
-echo $gender;
 
 if(!empty($_POST['infos'])){
     if(! filter_var($mail, FILTER_VALIDATE_EMAIL))
@@ -31,4 +31,7 @@ if(!empty($_POST['infos'])){
     }
 }
 require("views/account.views.php");
+
+print_r($user_data);
+echo "vache";
 ?>
