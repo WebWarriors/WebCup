@@ -11,13 +11,29 @@ include('partials/header.php'); ?>
                     <li> Prénom : <?= $_SESSION['f_name'];?> </li>
                     <li> Nom : <?= $_SESSION['l_name'];?> </li>
                     <li> Genre : <?= $gender;?> </li>
+                <?php if($edit): ?>
+                    <form method="POST" action="account.php" >
+                    <li> Votre île de résidence :
+                        <select name="gender" class="browser-default" value="<?php echo get_input("gender"); ?>">
+                            <option value="" disabled selected>Sexe</option>
+                            <option value="1">Femme</option>
+                            <option value="2">Homme</option>
+                            <option value="3">Autre</option>
+                        </select></li>
+                    <li> Téléphone : <input name="phone" id="phone" type="tel" class="validate" value="<?= $phone; ?>"> </li>
+                <?php else: ?>
                     <li> Votre île de résidence : <?= $island; ?> </li>
                     <li> Téléphone : <?= $phone; ?> </li>
+                <?php endif; ?>
                 </p>
 
             </div>
             <div class="card-action">
-                <a href="#">Modifier mes infos</a>
+                <?php if($edit): ?>
+                    <button  type="submit" name="edit_infos">Enregistrer mes infos</form>
+                <?php else: ?>
+                    <form method="POST" action="account.php" ><button  type="submit" name="edit">Modifier mes infos</form>
+                <?php endif; ?>
             </div>
         </div>
     </div>

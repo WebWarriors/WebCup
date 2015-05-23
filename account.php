@@ -13,8 +13,10 @@ foreach($user_data as $data){
 }
 $gender = strtr($gender, $gender_fields);
 
+if(!empty($_POST['edit']))
+    $edit = TRUE;
 
-if(!empty($_POST['infos'])){
+if(!empty($_POST['edit_infos'])){
     if(! filter_var($mail, FILTER_VALIDATE_EMAIL))
         $errors[] = "Adresse email invalide.";
     if(count($errors) == 0) {
