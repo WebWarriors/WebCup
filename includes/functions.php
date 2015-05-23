@@ -113,7 +113,7 @@ function find_user_by_id($key){
     $q = $db->prepare('SELECT * FROM `users` WHERE id= ?');
     $q->execute([$key]);
 
-    $data = $q->fetch(PDO::FETCH_OBJ);
+    $data = $q->fetchAll();;
     $q->closeCursor();
     return $data;
 }

@@ -5,15 +5,13 @@ require("includes/functions.php");
 $gender_fields = array(
     "F" => "Femme",
     "H" => "Homme",
-    "U" => "Indéterminé"
+    "U" => "Indéterminé",
 );
 $user_data = find_user_by_id($_SESSION['user_id']);
 foreach($user_data as $data){
-    $address = $data['address'];
-    $gender = strtr($data['gender'], $gender_fields);
-    $phone = $data['phone'];
-    $island = $data['island'];
+    extract($data);
 }
+$gender = strtr($gender, $gender_fields);
 
 
 if(!empty($_POST['infos'])){
@@ -31,7 +29,4 @@ if(!empty($_POST['infos'])){
     }
 }
 require("views/account.views.php");
-
-print_r($user_data);
-echo "vache";
 ?>
