@@ -1,5 +1,6 @@
-<?php $title = "Vous identifier" ?>
-<?php include('partials/header.php'); ?>
+<?php $title = "Vous identifier";
+include('includes/constants.php');
+include('partials/header.php'); ?>
 
 <div class="container">
 	<div class="row">

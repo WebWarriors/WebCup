@@ -1,5 +1,10 @@
 <?php
 
+if(!function_exists('is_logged_in')){
+    function is_logged_in(){
+        return isset($_SESSION['user_id']) || isset($_SESSION['f_name']);
+    }
+}
 function user_logout($page = "index.php"){
     session_start ();
     session_unset ();
