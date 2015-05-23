@@ -5,6 +5,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col s6">
+            <?php if(!empty($errors)){echo implode("<br/>",$errors);} ?>
 			<br>
 			<h4 class="light-blue-text">S'enregistrer</h4>
 			<div class="row">
@@ -83,9 +84,9 @@
                     </div>
 				</form>
 			</div>
-            <?php if(!empty($errors)){echo implode("<br/>",$errors);} ?>
 		</div>
 		<div class="col s6">
+            <?php if(!empty($error)){echo $error;} ?>
 			<br>
 			<h4 class="light-blue-text">Se connecter</h4>
 			<div class="row">
@@ -110,7 +111,6 @@
                         </div>
                     </div>
 				</form>
-                <?php if(!empty($error)){echo $error;} ?>
 			</div>
 		</div>
 	</div>	

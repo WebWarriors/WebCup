@@ -65,7 +65,6 @@ if(isset($_POST['register'])){
         }
     }else{
         save_input_data();
-        print_r($_POST);
         $errors[] =  "Veuillez remplir tous les champs";
     }
 }
