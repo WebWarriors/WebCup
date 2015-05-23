@@ -1,4 +1,4 @@
-        <footer class="page-footer">
+        <footer class="light-blue lighten-1 page-footer">
           	<div class="container">
 	            <div class="row">
 	              	<div class="col l6 s12">
@@ -8,7 +8,7 @@
 	              	<div class="col l4 offset-l2 s12">
 	                	<h5 class="white-text">Navigation rapide</h5>
 	                	<ul>
-							<li><a class="grey-text text-lighten-3" href="reserve.php">Réservez-votre place</li>
+							<li><a class="grey-text text-lighten-3" href="reserve.php">Réservez-votre place</a></li>
 	                	</ul>
 	              	</div>
             	</div>
