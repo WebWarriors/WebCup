@@ -130,7 +130,7 @@ function is_already_in_use($field, $value, $table){
 function user_login($user_mail, $passwd){
     $db = connexion_bdd();
     try{
-        $sql = $db->prepare("SELECT `id`, `f_name`, `l_name`, `mail` FROM `users` WHERE `mail` = ? AND `passwd` = ?");
+        $sql = $db->prepare("SELECT `id`, `f_name`, `l_name`, `mail`, `island` FROM `users` WHERE `mail` = ? AND `passwd` = ?");
         $sql->execute(array($user_mail, md5($passwd)));
         $answer = $sql->fetchAll();
     }catch(PDOException $e){
@@ -138,10 +138,20 @@ function user_login($user_mail, $passwd){
     }
     sleep(1);
     if($answer){
+        money_code = array(
+            "Grande Comore" => "KMF",
+            "Madagascar" => "MGA",
+            "Maurice" => "MUR",
+            "Mayotte" => "EUR",
+            "Réunion" => "EUR",
+            "Rodrigues" => "MUR",
+            "Seychelles" => "SCR"
+        );
         $_SESSION['user_id'] = $answer[0]['id'];
         $_SESSION['f_name'] = $answer[0]['f_name'];
         $_SESSION['l_name'] = $answer[0]['l_name'];
         $_SESSION['mail'] = $answer[0]['mail'];
+        $_SESSION['money_code'] = strtr($answer[0]['island'], $money_code);
         return TRUE;
     }else{
         return FALSE;
