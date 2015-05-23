@@ -95,12 +95,12 @@
 			</div>
 		</div>
 		<div class="col s6">
-            <?php if(!empty($errors)): ?>
+            <?php if(!empty($error)): ?>
                 <div class="col s12 m12">
                     <br>
                     <div class="card red darken-1">
                         <div class="card-content white-text valign-wrapper">
-                            <i class="small mdi-alert-error"> </i ><strong class="valign"><?php echo implode("<br/>",$errors); ?></strong>
+                            <i class="small mdi-alert-error"> </i ><strong class="valign"><?php echo implode("<br/>",$error); ?></strong>
                         </div>
                     </div>
                 </div>
@@ -137,11 +137,11 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/materialize.js"></script>
 
-    <script>
-        $(document).ready(function(){
-            $('.slider').slider({full_width: true});
-            $(".button-collapse").sideNav();
-        });
-    </script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slider({full_width: true});
+        $(".button-collapse").sideNav();
+    });
+</script>
 
 <?php include('partials/footer.php'); ?>
