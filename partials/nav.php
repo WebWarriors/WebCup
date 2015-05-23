@@ -13,7 +13,15 @@
                     <li class="<?= set_active('login'); ?>"><a href="login.php">Inscription|Connexion</a></li>
                 </ul>
             <?php endif; ?>
-            
+            <ul class="side-nav" id="mobile-demo">
+                <li class="set_active('reserve')"><a  href="reserve.php">Réservez-votre place</a></li>
+                <?php if(is_logged_in()): ?>
+                        <li class="set_active('account')"><a  href="account.php">Mon compte</a></li>
+                        <li><a href="logout.php">Déconnexion</a></li>
+                <?php else: ?>
+                        <li class="<?= set_active('login'); ?>"><a href="login.php"><strong>Inscription|Connexion</strong></a></li>
+                <?php endif; ?>
+            </ul>
         </div>
   	</nav>
 </div>
