@@ -1,5 +1,24 @@
 <?php
 
+if(!function_exists('get_input')){
+    function get_input($key){
+        return !empty($_SESSION['input'][$key]) ? e($_SESSION['input'][$key]) : null;
+    }
+}
+
+if(!function_exists('e')){
+    function e($string){
+        if($string){
+            return htmlspecialchars($string);
+        }
+    }
+}
+
+if(!function_exists('is_logged_in')){
+    function is_logged_in(){
+        return (!empty($_SESSION['user_id']));
+    }
+}
 function user_logout($page = "index.php"){
     session_start ();
     session_unset ();
@@ -52,7 +71,7 @@ function set_active($file, $class = "active"){
 
 function save_input_data(){
     foreach($_POST as $key => $value){
-        if( ($key['password']) === false){
+        if(strpos($key, 'password') === false){
             $_SESSION['input'][$key] = $value;
         }
     }
@@ -74,6 +93,17 @@ function user_register($array_user_info){
     }else{
         return false;
     }
+}
+
+function find_user_by_id($key){
+    global $db;
+
+    $q = $db->prepare('SELECT name, pseudo, email, twitter, facebook, promo, github, site, sex, city, bio, avatar FROM users WHERE id= ?');
+    $q->execute([$key]);
+
+    $data = $q->fetch(PDO::FETCH_OBJ);
+    $q->closeCursor();
+    return $data;
 }
 
 function is_already_in_use($field, $value, $table){
