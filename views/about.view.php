@@ -53,6 +53,7 @@
 <script>
 	$(document).ready(function(){
     	$('.parallax').parallax();
+    	$(".button-collapse").sideNav();
 
 	    var offset = 250;
 	    var duration = 300;
@@ -70,6 +71,5 @@
 	        return false;
 	    })
 	});
-</script>
 </script>
 <?php include('partials/footer.php'); ?>
