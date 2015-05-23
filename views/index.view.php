@@ -8,7 +8,7 @@
 			<div class="caption center-align">
 			    <h3>This is our big Tagline!</h3>
 		    	<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-		    	<a class="waves-effect waves-light btn">Stuff</a>
+		    	<a href="about.php#" class="waves-effect waves-light btn">Stuff</a>
 			</div>
 		</li>
 		<li>
@@ -16,7 +16,7 @@
 			<div class="caption center-align">
 			    <h3>Left Aligned Caption</h3>
 			    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-			    <a href="#" class="waves-effect waves-light btn">En savoir plus</a>
+			    <a href="about.php#" class="waves-effect waves-light btn">En savoir plus</a>
 			</div>
 		</li>
 	</ul>
