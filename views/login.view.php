@@ -6,10 +6,11 @@
 	<div class="row">
 		<div class="col s6">
 			<?php if(!empty($errors)): ?>
-            	<div class="col s4 m4">
-	          		<div class="card blue-grey darken-1">
-	            		<div class="card-content white-text">
-		              		<?php echo implode("<br/>",$errors); ?>
+            	<div class="col s12 m12">
+            		<br>
+	          		<div class="card red darken-1">
+	            		<div class="card-content white-text valign-wrapper">
+		              		<i class="small mdi-alert-error"> </i ><strong class="valign"><?php echo implode("<br/>",$errors); ?></strong>
 		            	</div>
 		          	</div>
 		        </div>
@@ -20,23 +21,23 @@
 				<form method="POST" action="login.php" class="col s12">
 					<div class="row">
 					    <div class="input-field col s6">
-					    	<input name="first_name" id="first_name" type="text" class="validate" value="<?php echo get_input("first_name") ?>">
+					    	<input name="first_name" id="first_name" type="text" class="validate" value="<?php echo get_input("first_name"); ?>">
 					    	<label for="first_name">Prénom</label>
 					    </div>
 					    <div class="input-field col s6">
-					    	<input name="last_name" id="last_name" type="text" class="validate" value="<?php echo get_input("last_name") ?>">
+					    	<input name="last_name" id="last_name" type="text" class="validate" value="<?php echo get_input("last_name"); ?>">
 					    	<label for="last_name">Nom</label>
 					    </div>
 					</div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input name="address" id="address" type="text" class="validate" value="<?php echo get_input("address") ?>">
+                            <input name="address" id="address" type="text" class="validate" value="<?php echo get_input("address"); ?>">
                             <label for="address">Adresse Postale</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <select name="island" class="browser-default" value="<?php echo get_input("island") ?>">
+                            <select name="island" class="browser-default" value="<?php echo get_input("island"); ?>">
                                 <option value="" disabled selected>Votre île</option>
                                 <option value="1">Grande Comore</option>
                                 <option value="2">Madagascar</option>
@@ -49,7 +50,7 @@
                         </div>
 
                         <div class="input-field col s6">
-                        <select name="gender" class="browser-default" value="<?php echo get_input("gender") ?>">
+                        <select name="gender" class="browser-default" value="<?php echo get_input("gender"); ?>">
                             <option value="" disabled selected>Sexe</option>
                             <option value="1">Femme</option>
                             <option value="2">Homme</option>
@@ -60,14 +61,14 @@
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <input name="phone" id="phone" type="tel" class="validate" value="<?php echo get_input("phone") ?>">
+                            <input name="phone" id="phone" type="tel" class="validate" value="<?php echo get_input("phone"); ?>">
                             <label for="phone">Numéro de téléphone</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <input name="mail" id="mail" type="email" class="validate" value="<?php echo get_input("mail") ?>">
+                            <input name="mail" id="mail" type="email" class="validate" value="<?php echo get_input("mail"); ?>">
                             <label for="mail">Email</label>
                         </div>
                     </div>
@@ -101,13 +102,13 @@
 				<form method="POST" action="login.php" class="col s12">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input name="email" id="email" type="email" class="validate" value="<?php echo get_input("email") ?>">
+                            <input name="email" id="email" type="email" class="validate" value="<?php echo get_input('email'); ?>">
                             <label for="email">Email</label>
                         </div>
                     </div>
 					<div class="row">
 					    <div class="input-field col s12">
-					    	<input name="passwd" id="passwd" type="password" class="validate" value="<?php echo get_input("passwd") ?>">
+					    	<input name="passwd" id="passwd" type="password" class="validate">
 					    	<label for="passwd">Mot de passe</label>
 					    </div>
 					</div>
