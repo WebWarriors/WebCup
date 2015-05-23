@@ -51,10 +51,8 @@ if(isset($_POST['register'])){
             print_r($user_data);
             if(user_register($user_data)){
                 clear_input_data();
-                $_SESSION['f_name'] = $first_name;
-                $_SESSION['l_name'] = $last_name;
-                $_SESSION['mail'] = $mail;
-                redirect_intent_or("index.php");
+                if(user_login($mail, $password))
+                    redirect_intent_or("index.php");
             }else{
                 save_input_data();
                 $errors[] = "Error, retry.";
