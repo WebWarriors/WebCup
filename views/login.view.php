@@ -1,5 +1,4 @@
 <?php $title = "Vous identifier" ?>
-<?php include('includes/constants.php'); ?>
 <?php include('partials/header.php'); ?>
 
 <div class="container">
@@ -8,56 +7,109 @@
 			<br>
 			<h4 class="light-blue-text">S'enregistrer</h4>
 			<div class="row">
-				<form class="col s12">
+				<form method="POST" action="login.php" class="col s12">
 					<div class="row">
 					    <div class="input-field col s6">
-					    	<input id="first_name" type="text" class="validate">
-					    	<label for="first_name">First Name</label>
+					    	<input name="first_name" id="first_name" type="text" class="validate">
+					    	<label for="first_name">Prénom</label>
 					    </div>
 					    <div class="input-field col s6">
-					    	<input id="last_name" type="text" class="validate">
-					    	<label for="last_name">Last Name</label>
+					    	<input name="last_name" id="last_name" type="text" class="validate">
+					    	<label for="last_name">Nom</label>
 					    </div>
 					</div>
-					<div class="row">
-					    <div class="input-field col s12">
-					    	<input id="username" type="text" class="validate">
-					    	<label for="username">Username</label>
-					    </div>
-					</div>
-					<div class="row">
-					    <div class="input-field col s12">
-					    	<input id="password" type="password" class="validate">
-					    	<label for="password">Password</label>
-					    </div>
-					</div>
-					<div class="row">
-						<div class="input-field col s12">
-						    <input id="email" type="email" class="validate">
-						    <label for="email">Email</label>
-						</div>
-					</div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="address" id="address" type="text" class="validate">
+                            <label for="address">Adresse Postale</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <select name="island" class="browser-default">
+                                <option value="" disabled selected>Votre île</option>
+                                <option value="1">Grande Comore</option>
+                                <option value="2">Madagascar</option>
+                                <option value="3">Maurice</option>
+                                <option value="4">Mayotte</option>
+                                <option value="5">Réunion</option>
+                                <option value="6">Rodrigues</option>
+                                <option value="7">Seychelles</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s6">
+                        <select name="gender" class="browser-default">
+                            <option value="" disabled selected>Sexe</option>
+                            <option value="1">Femme</option>
+                            <option value="2">Homme</option>
+                            <option value="3">Autre</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="phone" id="phone" type="tel" class="validate">
+                            <label for="phone">Numéro de téléphone</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="mail" id="mail" type="email" class="validate">
+                            <label for="mail">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="password" id="password" type="password" class="validate">
+                            <label for="password">Mot de passe</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="password_confirm" id="password_confirm" type="password" class="validate">
+                            <label for="password_confirm">Confirmez le mot de passe</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn waves-effect waves-light" type="submit" name="register">Inscription
+                            <i class="mdi-content-send right"></i>
+                        </button>
+                    </div>
 				</form>
 			</div>
+            <?php if(!empty($errors)){echo implode("<br/>",$errors);} ?>
 		</div>
 		<div class="col s6">
 			<br>
 			<h4 class="light-blue-text">Se connecter</h4>
 			<div class="row">
-				<form class="col s12">
+				<form method="POST" action="login.php" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="email" id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
 					<div class="row">
 					    <div class="input-field col s12">
-					    	<input id="password" type="password" class="validate">
-					    	<label for="password">Password</label>
+					    	<input name="passwd" id="passwd" type="password" class="validate">
+					    	<label for="passwd">Mot de passe</label>
 					    </div>
 					</div>
-					<div class="row">
-						<div class="input-field col s12">
-						    <input id="email" type="email" class="validate">
-						    <label for="email">Email</label>
-						</div>
-					</div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button class="btn waves-effect waves-light" type="submit" name="login">Connexion
+                                <i class="mdi-content-send right"></i>
+                            </button>
+                        </div>
+                    </div>
 				</form>
+                <?php if(!empty($error)){echo $error;} ?>
 			</div>
 		</div>
 	</div>	

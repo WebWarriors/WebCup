@@ -1,4 +1,12 @@
 <?php
+
+function user_logout($page = "index.php"){
+    session_start ();
+    session_unset ();
+    session_destroy ();
+    redirect($page);
+}
+
 function clear_input_data(){
     if(isset($_SESSION['input'])){
         $_SESSION['input'] = [];
@@ -44,7 +52,7 @@ function set_active($file, $class = "active"){
 
 function save_input_data(){
     foreach($_POST as $key => $value){
-        if( ($key, 'password') === false){
+        if( ($key['password']) === false){
             $_SESSION['input'][$key] = $value;
         }
     }
@@ -52,14 +60,13 @@ function save_input_data(){
 
 function user_register($array_user_info){
     $db = connexion_bdd();
-    extract($array_user_info);
     try{
-        $sql = $db->prepare("INSERT INTO `users` (`f_name`, `l_name`, `mail`, `address`, `gender`, `phone`, `passwd`) VALUES (:f_name, :l_name, :mail, :address, :gender, :phone, :passwd)");
+        $sql = $db->prepare("INSERT INTO `users` (`f_name`, `l_name`, `mail`, `address`, `island`, `gender`, `phone`, `passwd`) VALUES (:f_name, :l_name, :mail, :address, :island, :gender, :phone, :passwd)");
     }catch(PDOException $e){
         exit('<b>Error : '. $e->getLine() .' :</b> '. $e->getMessage());
     }
     if($sql->execute($array_user_info)){
-        $sql = "SELECT `id` FROM `users` WHERE `mail` = $array_user_info['mail']";
+        $sql = "SELECT `id` FROM `users` WHERE `mail` = ".$array_user_info['mail'];
         foreach($db->query($sql) as $row){
             $_SESSION['user_id'] = $row['id'];
         }
@@ -67,7 +74,6 @@ function user_register($array_user_info){
     }else{
         return false;
     }
-
 }
 
 function is_already_in_use($field, $value, $table){
@@ -100,9 +106,9 @@ function user_login($user_mail, $passwd){
     }
 }
 
-if(!function_exists('save_input_data')){
+if(!function_exists('connexion_bdd')){
     function connexion_bdd(){
-        $BDD_hote="54.217.208.79";
+        $BDD_hote="localhost";
         $BDD_nmDB="mac";
         $BDD_user="mac";
         $BDD_pass="664259sdSZ4u00x";
@@ -119,14 +125,17 @@ if(!function_exists('save_input_data')){
     }
 }
 
-	function set_active($file, $class = "active"){
-		$script = explode('/', $_SERVER['SCRIPT_NAME']);
-		$page = array_pop($script);
-	
-		if($page == $file.'.php'){
-			return $class;
-		}else{
-			return "";
-		}
-	}
+if(!function_exists('set_active')) {
+    function set_active($file, $class = "active")
+    {
+        $script = explode('/', $_SERVER['SCRIPT_NAME']);
+        $page = array_pop($script);
+
+        if ($page == $file . '.php') {
+            return $class;
+        } else {
+            return "";
+        }
+    }
+}
 ?>

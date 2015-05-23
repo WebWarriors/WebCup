@@ -1,14 +1,13 @@
 <?php
-require("views/login.view.php");
-
+require("includes/functions.php");
 
     //Vérifie le 'submit'
     if(isset($_POST['login'])){
         //Vérifie que les champs ont étés remplis
-        if(not_empty(['mail', 'password'])){
+        if(not_empty(['email', 'passwd'])){
             extract($_POST);
             //Contient l'ensemble des erreurs
-            if(user_login($mail, $password)){
+            if(user_login($email, $passwd)){
                 redirect_intent_or("index.php");
             }else{
                 $error = "Adresse email ou mot de passe incorrect.";
@@ -19,7 +18,7 @@ require("views/login.view.php");
  	//Vérifie le 'submit'
 	if(isset($_POST['register'])){
         //Vérifie que les champs ont étés remplis
-        if(not_empty(['first_name', 'last_name', 'mail', 'address', 'gender', 'phone', 'password', 'password_confirm'])){
+        if(not_empty(['first_name', 'last_name', 'mail', 'address', 'island', 'gender', 'phone', 'password', 'password_confirm'])){
             //Contient l'ensemble des erreurs
             $errors = [];
             extract($_POST);
@@ -27,8 +26,6 @@ require("views/login.view.php");
                 $errors[] = "Votre prénom doit faire au moins trois caractères.";
             if(mb_strlen($last_name) < 3)
                 $errors[] = "Votre nom de famille doit faire au moins trois caractères.";
-            if(!preg_match("/([^0-9])/", $phone))
-                $errors[] = "Format de numéro de téléphone incorrect.";
 			if(! filter_var($mail, FILTER_VALIDATE_EMAIL))
                 $errors[] = "Adresse email invalide.";
 			if(mb_strlen($password) < 6){
@@ -46,10 +43,12 @@ require("views/login.view.php");
                     "l_name" => $last_name,
                     "mail" => $mail,
                     "address" => $address,
+                    "island" => $island,
                     "gender" => $gender,
 					"phone" => $phone,
-					"passwd" => $password
+					"passwd" => md5($password)
                 );
+                print_r($user_data);
 				if(user_register($user_data)){
                     clear_input_data();
                     $_SESSION['f_name'] = $first_name;
@@ -58,7 +57,7 @@ require("views/login.view.php");
                     redirect_intent_or("index.php");
                 }else{
                     save_input_data();
-                    $message = "Error, retry.";
+                    $errors[] = "Error, retry.";
                 }
 
 			}else{
@@ -66,7 +65,9 @@ require("views/login.view.php");
             }
 		}else{
             save_input_data();
+            print_r($_POST);
             $errors[] =  "Veuillez remplir tous les champs";
         }
     }
+require("views/login.view.php");
 ?>
