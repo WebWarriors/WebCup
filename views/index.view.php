@@ -9,9 +9,8 @@ include('partials/header.php'); ?>
 		<li>
 		    <img src="src/2.jpg"> <!-- random image -->
 			<div class="caption center-align">
-			    <h3>This is our big Tagline!</h3>
-		    	<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-		    	<a href="about.php#" class="waves-effect waves-light btn">Stuff</a>
+			    <h3>Découvrez le TransIslands</h3>
+		    	<h5 class="light grey-text text-lighten-3">Un mode de transport révolutionaire !</h5>
 			</div>
 		</li>
 		<li>
