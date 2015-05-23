@@ -13,6 +13,7 @@ include('partials/header.php'); ?>
                     <li> Genre : <?= $gender;?> </li>
                     <li> Votre île de résidence : <?= $island; ?> </li>
                 </p>
+
             </div>
             <div class="card-action">
                 <a href="#">This is a link</a>
