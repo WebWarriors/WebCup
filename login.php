@@ -1,6 +1,6 @@
 <?php
-require("includes/functions.php");
 session_start();
+require("includes/functions.php");
 //Vérifie le 'submit'
 if(isset($_POST['login'])){
     //Vérifie que les champs ont étés remplis
@@ -68,5 +68,6 @@ if(isset($_POST['register'])){
         $errors[] =  "Veuillez remplir tous les champs";
     }
 }
+
 require("views/login.view.php");
 ?>
