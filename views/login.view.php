@@ -2,10 +2,8 @@
 <?php include('includes/constants.php'); ?>
 <?php include('partials/header.php'); ?>
 
-<<<<<<< HEAD
 <?php include('partials/footer.php'); ?>
 
-=======
 <div class="container">
 	<div class="row">
 		<div class="col s6">
@@ -72,4 +70,3 @@
 	<script type="text/javascript" src="assets/js/materialize.js"></script>
 
 <?php include('partials/footer.php'); ?>
->>>>>>> d56bbff1329bd90c73f5decf2f5ebc402a595f9b

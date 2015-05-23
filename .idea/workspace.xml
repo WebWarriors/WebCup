@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66c8384a-22d7-40be-bc84-b5d405aeddbe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="C:\MAMP\htdocs\WebCup\login.php" afterPath="C:\MAMP\htdocs\WebCup\login.php" />
-      <change type="MODIFICATION" beforePath="C:\MAMP\htdocs\WebCup\views\login.view.php" afterPath="C:\MAMP\htdocs\WebCup\views\login.view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.view.php" afterPath="$PROJECT_DIR$/views/login.view.php" />
     </list>
     <ignored path="WebCup.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.275" vertical-offset="1426" max-vertical-offset="4278">
+            <state vertical-scroll-proportion="-1.7039312" vertical-offset="3464" max-vertical-offset="4278">
               <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
               <folding>
                 <marker date="1432389035650" expanded="true" signature="804:890" placeholder="SELECT `id`,..." />
@@ -48,11 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.037484884" vertical-offset="0" max-vertical-offset="827">
+            <state vertical-scroll-proportion="-0.775" vertical-offset="0" max-vertical-offset="248">
               <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/login.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-55.8" vertical-offset="0" max-vertical-offset="2418">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,9 +75,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/views/login.view.php" />
         <option value="$PROJECT_DIR$/includes/functions.php" />
         <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/views/login.view.php" />
       </list>
     </option>
   </component>
@@ -279,9 +287,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.775" vertical-offset="0" max-vertical-offset="248">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-55.8" vertical-offset="0" max-vertical-offset="2418">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.275" vertical-offset="1426" max-vertical-offset="4278">
+        <state vertical-scroll-proportion="-1.7039312" vertical-offset="3464" max-vertical-offset="4278">
           <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
           <folding>
             <marker date="1432389035650" expanded="true" signature="804:890" placeholder="SELECT `id`,..." />
@@ -293,14 +317,6 @@
             <marker date="1432389035650" expanded="true" signature="1842:1886" placeholder="SELECT `id` ..." />
             <marker date="1432389035650" expanded="true" signature="2098:2184" placeholder="SELECT `id`,..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037484884" vertical-offset="0" max-vertical-offset="827">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
