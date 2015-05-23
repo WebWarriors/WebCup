@@ -16,8 +16,7 @@ include('partials/header.php'); ?>
 
             </div>
             <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href='#'>This is a link</a>
+                <a href="#">Modifier mes infos</a>
             </div>
         </div>
     </div>

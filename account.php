@@ -2,7 +2,6 @@
 session_start();
 require("includes/functions.php");
 
-<?php
 $gender_fields = array(
     "F" => "Femme",
     "H" => "Homme",
@@ -31,5 +30,4 @@ if(!empty($_POST['infos'])){
     }
 }
 require("views/account.views.php");
-
 ?>

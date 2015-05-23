@@ -108,7 +108,7 @@ function user_register($array_user_info){
 }
 
 function find_user_by_id($key){
-    global $db;
+    $db = connexion_bdd();
 
     $q = $db->prepare('SELECT name, pseudo, email, twitter, facebook, promo, github, site, sex, city, bio, avatar FROM users WHERE id= ?');
     $q->execute([$key]);
