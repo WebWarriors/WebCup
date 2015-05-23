@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66c8384a-22d7-40be-bc84-b5d405aeddbe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/about.view.php" afterPath="$PROJECT_DIR$/views/about.view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/functions.php" afterPath="$PROJECT_DIR$/includes/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.view.php" afterPath="$PROJECT_DIR$/views/index.view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.view.php" afterPath="$PROJECT_DIR$/views/login.view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/nav.php" afterPath="$PROJECT_DIR$/partials/nav.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebCup.iws" />
@@ -39,21 +36,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.5273886" vertical-offset="1674" max-vertical-offset="4712">
-              <caret line="118" column="34" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="34" />
+            <state vertical-scroll-proportion="-49.6" vertical-offset="2046" max-vertical-offset="5053">
+              <caret line="130" column="28" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="34" />
               <folding>
-                <marker date="1432400823314" expanded="true" signature="1089:1175" placeholder="SELECT `id`,..." />
-                <marker date="1432400823314" expanded="true" signature="1211:1368" placeholder="INSERT INTO ..." />
-                <marker date="1432400823314" expanded="true" signature="1398:1435" placeholder="SELECT `id` ..." />
-                <marker date="1432400823314" expanded="true" signature="1437:1613" placeholder="INSERT INTO ..." />
-                <marker date="1432400823314" expanded="true" signature="1782:1821" placeholder="SELECT `id` ..." />
-                <marker date="1432400823314" expanded="true" signature="1782:1822" placeholder="SELECT `id` ..." />
-                <marker date="1432400823314" expanded="true" signature="2094:2180" placeholder="SELECT `id`,..." />
-                <marker date="1432400823314" expanded="true" signature="2115:2159" placeholder="SELECT `id` ..." />
-                <marker date="1432400823314" expanded="true" signature="2371:2457" placeholder="SELECT `id`,..." />
+                <marker date="1432402916577" expanded="true" signature="1089:1175" placeholder="SELECT `id`,..." />
+                <marker date="1432402916577" expanded="true" signature="1211:1368" placeholder="INSERT INTO ..." />
+                <marker date="1432402916577" expanded="true" signature="1398:1435" placeholder="SELECT `id` ..." />
+                <marker date="1432402916577" expanded="true" signature="1437:1613" placeholder="INSERT INTO ..." />
+                <marker date="1432402916577" expanded="true" signature="1782:1821" placeholder="SELECT `id` ..." />
+                <marker date="1432402916577" expanded="true" signature="1782:1822" placeholder="SELECT `id` ..." />
+                <marker date="1432402916577" expanded="true" signature="2392:2478" placeholder="SELECT `id`,..." />
+                <marker date="1432402916577" expanded="true" signature="2413:2457" placeholder="SELECT `id` ..." />
+                <marker date="1432402916577" expanded="true" signature="2669:2755" placeholder="SELECT `id`,..." />
               </folding>
             </state>
           </provider>
@@ -99,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.view.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/login.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3999">
-              <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+            <state vertical-scroll-proportion="4.8139224" vertical-offset="0" max-vertical-offset="3999">
+              <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -135,7 +132,7 @@
             <state vertical-scroll-proportion="-0.775" vertical-offset="0" max-vertical-offset="1116">
               <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <marker date="1432402446086" expanded="true" signature="794:827" placeholder="..." />
+                <marker date="1432402915259" expanded="true" signature="794:827" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -151,11 +148,11 @@
       <list>
         <option value="$PROJECT_DIR$/partials/header.php" />
         <option value="$PROJECT_DIR$/logout.php" />
-        <option value="$PROJECT_DIR$/includes/functions.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/partials/nav.php" />
         <option value="$PROJECT_DIR$/views/index.view.php" />
+        <option value="$PROJECT_DIR$/includes/functions.php" />
         <option value="$PROJECT_DIR$/views/login.view.php" />
       </list>
     </option>
@@ -475,7 +472,7 @@
         <state vertical-scroll-proportion="-0.775" vertical-offset="0" max-vertical-offset="1116">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <marker date="1432402446086" expanded="true" signature="794:827" placeholder="..." />
+            <marker date="1432402915259" expanded="true" signature="794:827" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -488,29 +485,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.view.php">
+    <entry file="file://$PROJECT_DIR$/includes/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3999">
-          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
+        <state vertical-scroll-proportion="-49.6" vertical-offset="2046" max-vertical-offset="5053">
+          <caret line="130" column="28" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="34" />
+          <folding>
+            <marker date="1432402916577" expanded="true" signature="1089:1175" placeholder="SELECT `id`,..." />
+            <marker date="1432402916577" expanded="true" signature="1211:1368" placeholder="INSERT INTO ..." />
+            <marker date="1432402916577" expanded="true" signature="1398:1435" placeholder="SELECT `id` ..." />
+            <marker date="1432402916577" expanded="true" signature="1437:1613" placeholder="INSERT INTO ..." />
+            <marker date="1432402916577" expanded="true" signature="1782:1821" placeholder="SELECT `id` ..." />
+            <marker date="1432402916577" expanded="true" signature="1782:1822" placeholder="SELECT `id` ..." />
+            <marker date="1432402916577" expanded="true" signature="2392:2478" placeholder="SELECT `id`,..." />
+            <marker date="1432402916577" expanded="true" signature="2413:2457" placeholder="SELECT `id` ..." />
+            <marker date="1432402916577" expanded="true" signature="2669:2755" placeholder="SELECT `id`,..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/functions.php">
+    <entry file="file://$PROJECT_DIR$/views/login.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5273886" vertical-offset="1674" max-vertical-offset="4712">
-          <caret line="118" column="34" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="34" />
-          <folding>
-            <marker date="1432400823314" expanded="true" signature="1089:1175" placeholder="SELECT `id`,..." />
-            <marker date="1432400823314" expanded="true" signature="1211:1368" placeholder="INSERT INTO ..." />
-            <marker date="1432400823314" expanded="true" signature="1398:1435" placeholder="SELECT `id` ..." />
-            <marker date="1432400823314" expanded="true" signature="1437:1613" placeholder="INSERT INTO ..." />
-            <marker date="1432400823314" expanded="true" signature="1782:1821" placeholder="SELECT `id` ..." />
-            <marker date="1432400823314" expanded="true" signature="1782:1822" placeholder="SELECT `id` ..." />
-            <marker date="1432400823314" expanded="true" signature="2094:2180" placeholder="SELECT `id`,..." />
-            <marker date="1432400823314" expanded="true" signature="2115:2159" placeholder="SELECT `id` ..." />
-            <marker date="1432400823314" expanded="true" signature="2371:2457" placeholder="SELECT `id`,..." />
-          </folding>
+        <state vertical-scroll-proportion="4.8139224" vertical-offset="0" max-vertical-offset="3999">
+          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
