@@ -138,7 +138,7 @@ function user_login($user_mail, $passwd){
     }
     sleep(1);
     if($answer){
-        money_code = array(
+        $money_code = array(
             "Grande Comore" => "KMF",
             "Madagascar" => "MGA",
             "Maurice" => "MUR",
