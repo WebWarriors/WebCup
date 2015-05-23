@@ -30,3 +30,4 @@
 			$(".button-collapse").sideNav();
     	});
 	</script>
+<?php include('partials/footer.php'); ?>
