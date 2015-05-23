@@ -76,6 +76,17 @@ function user_register($array_user_info){
     }
 }
 
+function find_user_by_id($key){
+    global $db;
+
+    $q = $db->prepare('SELECT name, pseudo, email, twitter, facebook, promo, github, site, sex, city, bio, avatar FROM users WHERE id= ?');
+    $q->execute([$key]);
+
+    $data = $q->fetch(PDO::FETCH_OBJ);
+    $q->closeCursor();
+    return $data;
+}
+
 function is_already_in_use($field, $value, $table){
     $db = connexion_bdd();
     $q = $db->prepare("SELECT `id` FROM `$table` WHERE `$field` = ?");
