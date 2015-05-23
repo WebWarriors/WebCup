@@ -6,10 +6,11 @@
 	<div class="row">
 		<div class="col s6">
 			<?php if(!empty($errors)): ?>
-            	<div class="col s4 m4">
-	          		<div class="card blue-grey darken-1">
-	            		<div class="card-content white-text">
-		              		<?php echo implode("<br/>",$errors); ?>
+            	<div class="col s12 m12">
+            		<br>
+	          		<div class="card red darken-1">
+	            		<div class="card-content white-text valign-wrapper">
+		              		<i class="small mdi-alert-error"> </i ><strong class="valign"><?php echo implode("<br/>",$errors); ?></strong>
 		            	</div>
 		          	</div>
 		        </div>
