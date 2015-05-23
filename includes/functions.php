@@ -71,7 +71,7 @@ function set_active($file, $class = "active"){
 
 function save_input_data(){
     foreach($_POST as $key => $value){
-        if( ($key['password']) === false){
+        if(strpos($key, 'password') === false){
             $_SESSION['input'][$key] = $value;
         }
     }

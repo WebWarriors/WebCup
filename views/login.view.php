@@ -5,7 +5,15 @@
 <div class="container">
 	<div class="row">
 		<div class="col s6">
-            <?php if(!empty($errors)){echo implode("<br/>",$errors);} ?>
+			<?php if(!empty($errors)): ?>
+            	<div class="col s4 m4">
+	          		<div class="card blue-grey darken-1">
+	            		<div class="card-content white-text">
+		              		<?php echo implode("<br/>",$errors); ?>
+		            	</div>
+		          	</div>
+		        </div>
+        	<?php endif; ?>
 			<br>
 			<h4 class="light-blue-text">S'enregistrer</h4>
 			<div class="row">
