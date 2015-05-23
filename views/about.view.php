@@ -12,7 +12,7 @@
 </div>
 <div class="parallax-container">
 	<div class="parallax">
-		<img src="http://lorempixel.com/1080/720/">
+		<img src="../src/">
 	</div>
 </div>
 <div class="container">
