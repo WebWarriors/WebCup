@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 <?php
+
+function set_active($file, $class = "active"){
+    $script = explode('/', $_SERVER['SCRIPT_NAME']);
+    $page = array_pop($script);
+
+    if($page == $file.'.php'){
+        return $class;
+    }else{
+        return "";
+    }
+}
 
 function save_input_data(){
     foreach($_POST as $key => $value){
@@ -67,3 +79,17 @@ if(!function_exists('save_input_data')){
         return $bdd;
     }
 }
+=======
+<?php 
+	function set_active($file, $class = "active"){
+		$script = explode('/', $_SERVER['SCRIPT_NAME']);
+		$page = array_pop($script);
+	
+		if($page == $file.'.php'){
+			return $class;
+		}else{
+			return "";
+		}
+	}
+?>
+>>>>>>> origin/#Dev
