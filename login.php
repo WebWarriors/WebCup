@@ -46,7 +46,7 @@ if(isset($_POST['register'])){
                 "island" => $island,
                 "gender" => $gender,
                 "phone" => $phone,
-                "passwd" => $password
+                "passwd" => md5($password)
             );
             print_r($user_data);
             if(user_register($user_data)){
