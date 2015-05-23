@@ -1,8 +1,5 @@
 <?php
 require("views/login.view.php");
-<?php
-
-
 
  	//Vérifie le 'submit'
 	if(isset($_POST['register'])){
@@ -16,7 +13,7 @@ require("views/login.view.php");
             if(mb_strlen($last_name) < 3)
                 $errors[] = "Votre nom de famille doit faire au moins trois caractères.";
             if(!preg_match("/([^0-9])/", $phone))
-                $errors[] = "Format de numéro de téléphone incorrect."
+                $errors[] = "Format de numéro de téléphone incorrect.";
 			if(! filter_var($mail, FILTER_VALIDATE_EMAIL))
                 $errors[] = "Adresse email invalide.";
 			if(mb_strlen($password) < 6){
@@ -34,10 +31,10 @@ require("views/login.view.php");
                     "l_name" => $last_name,
                     "mail" => $mail,
                     "address" => $adress,
-                    "gender" => $gender
+                    "gender" => $gender,
 					"phone" => $phone,
 					"passwd" => $passwd
-				)
+				);
 				if(user_register($user_data)){
                     clear_input_data();
                     redirect('index.php');
