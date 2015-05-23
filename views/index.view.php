@@ -1,5 +1,7 @@
-<?php include('includes/constants.php'); ?>
-<?php include('partials/header.php'); ?>
+<?php
+require("includes/functions.php");
+include('includes/constants.php');
+include('partials/header.php'); ?>
 
 <div class="slider fullscreen">
 	<ul class="slides">
