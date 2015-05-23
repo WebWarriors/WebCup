@@ -95,7 +95,16 @@
 			</div>
 		</div>
 		<div class="col s6">
-            <?php if(!empty($error)){echo $error;} ?>
+            <?php if(!empty($errors)): ?>
+                <div class="col s12 m12">
+                    <br>
+                    <div class="card red darken-1">
+                        <div class="card-content white-text valign-wrapper">
+                            <i class="small mdi-alert-error"> </i ><strong class="valign"><?php echo implode("<br/>",$errors); ?></strong>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
 			<br>
 			<h4 class="light-blue-text">Se connecter</h4>
 			<div class="row">
