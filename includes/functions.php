@@ -1,4 +1,35 @@
 <?php
+function clear_input_data(){
+    if(isset($_SESSION['input'])){
+        $_SESSION['input'] = [];
+    }
+}
+
+function redirect_intent_or($default_url){
+    if($_SESSION['page']){
+        $url = $_SESSION['page'];
+        $_SESSION['page'] = null;
+    }else{
+        $url = $default_url;
+    }
+    redirect($url);
+}
+
+function not_empty($fields = []){
+    if(count($fields) != 0){
+        foreach($fields as $field){
+            if(empty($_POST[$field]) || trim($_POST[$field]) == ""){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+function redirect($page){
+    header('Location:'.$page);
+    exit();
+}
 
 function set_active($file, $class = "active"){
     $script = explode('/', $_SERVER['SCRIPT_NAME']);
@@ -24,10 +55,19 @@ function user_register($array_user_info){
     extract($array_user_info);
     try{
         $sql = $db->prepare("INSERT INTO `users` (`f_name`, `l_name`, `mail`, `address`, `gender`, `phone`, `passwd`) VALUES (:f_name, :l_name, :mail, :address, :gender, :phone, :passwd)");
-        $sql->execute($array_user_info);
     }catch(PDOException $e){
         exit('<b>Error : '. $e->getLine() .' :</b> '. $e->getMessage());
     }
+    if($sql->execute($array_user_info)){
+        $sql = "SELECT `id` FROM `users` WHERE `mail` = $array_user_info['mail']";
+        foreach($db->query($sql) as $row){
+            $_SESSION['user_id'] = $row['id'];
+        }
+        return true;
+    }else{
+        return false;
+    }
+
 }
 
 function is_already_in_use($field, $value, $table){

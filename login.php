@@ -1,8 +1,20 @@
 <?php
 require("views/login.view.php");
-<?php
 
 
+    //Vérifie le 'submit'
+    if(isset($_POST['login'])){
+        //Vérifie que les champs ont étés remplis
+        if(not_empty(['mail', 'password'])){
+            extract($_POST);
+            //Contient l'ensemble des erreurs
+            if(user_login($mail, $password)){
+                redirect_intent_or("index.php");
+            }else{
+                $error = "Adresse email ou mot de passe incorrect.";
+            }
+        }
+    }
 
  	//Vérifie le 'submit'
 	if(isset($_POST['register'])){
@@ -16,7 +28,7 @@ require("views/login.view.php");
             if(mb_strlen($last_name) < 3)
                 $errors[] = "Votre nom de famille doit faire au moins trois caractères.";
             if(!preg_match("/([^0-9])/", $phone))
-                $errors[] = "Format de numéro de téléphone incorrect."
+                $errors[] = "Format de numéro de téléphone incorrect.";
 			if(! filter_var($mail, FILTER_VALIDATE_EMAIL))
                 $errors[] = "Adresse email invalide.";
 			if(mb_strlen($password) < 6){
@@ -33,14 +45,17 @@ require("views/login.view.php");
                     "f_name" => $first_name,
                     "l_name" => $last_name,
                     "mail" => $mail,
-                    "address" => $adress,
-                    "gender" => $gender
+                    "address" => $address,
+                    "gender" => $gender,
 					"phone" => $phone,
-					"passwd" => $passwd
-				)
+					"passwd" => $password
+                );
 				if(user_register($user_data)){
                     clear_input_data();
-                    redirect('index.php');
+                    $_SESSION['f_name'] = $first_name;
+                    $_SESSION['l_name'] = $last_name;
+                    $_SESSION['mail'] = $mail;
+                    redirect_intent_or("index.php");
                 }else{
                     save_input_data();
                     $message = "Error, retry.";
