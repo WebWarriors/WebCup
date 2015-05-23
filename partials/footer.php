@@ -9,13 +9,14 @@
 	                	<h5 class="white-text">Navigation rapide</h5>
 	                	<ul>
 							<li><a class="grey-text text-lighten-3" href="reserve.php">Réservez-votre place</a></li>
+							<li><a class="grey-text text-lighten-3" href="#">Sources</a></li>
 	                	</ul>
 	              	</div>
             	</div>
           	</div>
           	<div class="footer-copyright">
             	<div class="container">
-            			© 2050 Copyright Text
+            		© 2050 Copyright Text
             	</div>
         	</div>
         </footer>
