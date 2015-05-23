@@ -4,7 +4,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col s6">
+		<div class="col s5">
 			<?php if(!empty($errors)): ?>
             	<div class="col s12 m12">
             		<br>
@@ -94,7 +94,7 @@
 				</form>
 			</div>
 		</div>
-		<div class="col s6">
+		<div class="col s5 offset-m1">
             <?php if(!empty($error)): ?>
                 <div class="col s12 m12">
                     <br>
