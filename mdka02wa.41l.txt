@@ -1,0 +1,30 @@
+﻿Merge branch '#Dev' of https://github.com/WebWarriors/WebCup into #Dev
+
+Conflicts:
+	.idea/workspace.xml
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch #Dev
+# Your branch and 'origin/#Dev' have diverged,
+# and have 2 and 5 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	deleted:    .idea/workspace.xml
+#	new file:   assets/img/HL01.jpg
+#	new file:   assets/img/HL02.JPG
+#	new file:   assets/img/HL03.jpg
+#	new file:   assets/img/HL04.jpg
+#	modified:   login.php
+#	modified:   views/login.view.php
+#
+
