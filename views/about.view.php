@@ -15,24 +15,27 @@
 	<section>
 		<div class="row">
 			<h4 class="light-blue-text"> Le TransIsland, votre nouveau transporteur</h4>
-			<div class="col s8 m8">
+			<div class="col s6 m12">
                 <p> Montez à bord de capsules disposées dans un tube à air comprimé !
                     <br/> Appréciez le silence produit par l'abscence de rail : c'est la technologie du magnétisme!
                     <br/> Vous pouvez désormais voyager d’une île à l’autre de l’Océan Indien sous les mers et au dessus
-                    des terres, à une vitesse maximale de 2500 km/h. Il est certain que vos le temps de vos trajet sera
+                    des terres, à une vitesse maximale de 2500 km/h. Il est certain que le temps de vos trajet sera
                     considérablement réduit. Par exemple, pour un voyage "Réunion-Mayotte" vous ne mettrez plus que 7 minutes
-                    au lieu de 45 minutes en avion.
+                    au lieu de 25 minutes en Hoax.
+
+                    Un véritable moyen de se déplacer rapidement et simplement ! Pas de procédures pénalisantes, vous entrez, et hop, vous voyagez !
 
                     <br/> <br/>
                     Le TransIsland se veut être écologique :
-                    <br/>• il est auto suffisant : son énergie est fournie grâce aux panneaux solaires qui recouvrent les tubes et les stations.
-                    <br/>• étant silencieux et ayant des vibrations sont minimes voir inexistantes, et votre nouveau transport ne nuit pas à la santée de la faune et la flore avoisinate.
+                    <br/>• il est auto suffisant : son énergie est fournie grâce aux panneaux solaires qui recouvrent les tubes terrestres et les stations.
+                    <br/>• silencieux et émettant peu de vibrations, votre nouveau transport ne nuit pas à la santé de la faune et la flore avoisinante.
                     <br/><br/>
-          Les avantages  </p>
+
+                    Il est  </p>
                     <ul>
-                        <li>Sécure</li>
-                        <li>Plus rapide</li>
-                        <li>Moins cher</li>
+                        <li>Sécurisé : Aucun risques de collisions, des voies réservées, des lignes minutieusement étudiées</li>
+                        <li>Rapide et innovant : Observez les merveilles des fond marins lors de votre traversée !</li>
+                        <li>Peu cher : Mais tout aussi confortable, professionels, vous aprécierez l'accès à tous vos services terrestres, familles vous aimerez nos box d'i</li>
                         <li>Plus pratique</li>
                         <li>Resistant aux intempéries, tsunamis, tremblements de terre</li>
                         <li>Durable</li>

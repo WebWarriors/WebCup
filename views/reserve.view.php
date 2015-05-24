@@ -13,6 +13,7 @@
         }
         ?>
 		<div class="col s5 m5">
+            <br />
 			<h4>Parcourez l'Océan Indien en <strong>moins de 2 heures 30 minutes</strong> !</h4>
 			<p>
 				<strong>Souscrivez</strong> rapidement à un abonnement afin de pouvoir voyager sur notre réseau sans attendre, à un n'importe quel moment, quelque soit la météo !
