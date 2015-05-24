@@ -39,9 +39,26 @@ include('partials/header.php'); ?>
                     </li>
                     <div class="input-field col s12">
                         <li> Téléphone :
-                                    <input name="phone" id="phone" type="tel" class="validate" value="<?= $phone; ?>">
+                            <input name="phone" id="phone" type="tel" class="validate" value="<?= $phone; ?>">
                         </li>
                     </div>
+                <?php elseif(!empty($_POST['edit_p'])): ?>
+                        <form method="POST" action="account.php" >
+                        <div class="input-field col s12">
+                            <li> Mot de passe actuel :
+                                <input name="o_passwd" id="o_passwd" type="password" class="validate" >
+                            </li>
+                        </div>
+                        <div class="input-field col s12">
+                            <li> Nouveau mot de passe :
+                                <input name="n_passwd" id="n_passwd" type="password" class="validate" >
+                            </li>
+                        </div>
+                        <div class="input-field col s12">
+                            <li> Confirmez :
+                                <input name="cn_passwd" id="cn_passwd" type="password" class="validate" >
+                            </li>
+                        </div>
                 <?php else: ?>
                     <li> Adresse email : <?= $mail; ?></li>
                     <li> Adresse : <?= $address; ?></li>
@@ -53,9 +70,12 @@ include('partials/header.php'); ?>
             </div>
             <div class="card-action">
                 <?php if(!empty($_POST['edit'])): ?>
-                    <button  type="submit" name="edit_infos" value="edit">Enregistrer mes infos</form>
+                    <button  type="submit" name="edit_infos" value="edit">Enregistrer mes infos</button></form>
+                <?php elseif(!empty($_POST['edit_p'])): ?>
+                    <button  type="submit" name="edit_passwd" value="edit">Modifier</button></form>
                 <?php else: ?>
-                    <form method="POST" action="account.php" ><button  type="submit" name="edit" value="edit">Modifier mes infos</form>
+                    <form method="POST" action="account.php" ><button  type="submit" name="edit" value="edit">Modifier mes infos</button></form>
+                    <form method="POST" action="account.php" ><button  type="submit" name="edit_p" value="edit">Changer de mot de passe</button></form>
                 <?php endif; ?>
             </div>
             <?php if(!empty($errors)): ?>

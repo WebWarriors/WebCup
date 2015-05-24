@@ -15,6 +15,29 @@ $gender_fields = array(
 $gender = strtr($gender, $gender_fields);
 $island_id = island_id_name($island);
 
+if(!empty($_POST['edit_passwd'])){
+    if(not_empty(['o_passwd', 'n_passwd', 'cn_passwd'])){
+        if(md5($_POST['o_passwd']) == $passwd){
+            if($_POST['n_passwd'] == $_POST['cn_passwd']){
+                $update = array(
+                    "passwd" => md5($_POST['n_passwd']),
+                    "id" => $_SESSION['user_id']
+                );
+                update_user_by_id($update, "passwd");
+            }else{
+                $errors[] = "Les deux mots de passes ne correspondent pas.";
+                $_POST['edit_p'] = "try_again";
+            }
+        }else{
+            $errors[] = "Votre mot de passe actuel est incorrect.";
+            $_POST['edit_p'] = "try_again";
+        }
+    }else{
+        $errors[] = "Tous les champs doivent êtres remplis.";
+        $_POST['edit_p'] = "try_again";
+    }
+}
+
 if(!empty($_POST['edit_infos'])){
     if(not_empty(['mail', 'address', 'phone'])) {
         if (!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL))

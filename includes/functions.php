@@ -24,14 +24,19 @@ function island_id_name($mixed)
     }
 }
 
-function  update_user_by_id($update){
-    if(empty($update['island']))
-        $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `phone` = :phone WHERE `id` = :id";
-    else
-        $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `island` = :island, `phone` = :phone WHERE `id` = :id";
+function  update_user_by_id($update, $obj = ""){
     $db = connexion_bdd();
-    $q = $db->prepare($sql);
-    if($q->execute($update))
+    if(empty($obj)) {
+        if (empty($update['island']))
+            $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `phone` = :phone WHERE `id` = :id";
+        else
+            $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `island` = :island, `phone` = :phone WHERE `id` = :id";
+        $q = $db->prepare($sql);
+    }else{
+        $q = $db->prepare("UPDATE `users` SET `passwd` = :passwd WHERE `id` = :id");
+    }
+
+    if ($q->execute($update))
         return true;
     else
         return false;
