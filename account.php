@@ -57,7 +57,7 @@ if(!empty($_POST['edit_infos'])){
         }
 
     }else{
-        $errors[]="Des champs sont vides ...".print_r($_POST);
+        $errors[]="Tous les champs doivent êtres remplis.";
     }
 }
 require("views/account.views.php");

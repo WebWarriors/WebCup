@@ -1,5 +1,20 @@
 <?php
 
+function money_converter_local($io, $local_currency){
+
+    $currency_changes = array(
+        "EUR" => 0.67,
+        "SCR" => 9.93,
+        "KMF" => 329.61,
+        "MUR" => 25.82,
+        "MGA" => 2344.28
+    );
+
+    $local_change = strtr($local_currency, $currency_changes);
+    $amount = $io*$local_change;
+    return $amount." ".$local_currency;
+}
+
 function island_id_name($mixed)
 {
     $island_tab = array(
