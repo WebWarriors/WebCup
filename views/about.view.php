@@ -1,48 +1,89 @@
+<?php $title = "NOM DU PROJET" ?>
 <?php include('includes/constants.php'); ?>
-<?php $title = WEBSITE_NAME; ?>
-
+<?php include('includes/functions.php'); ?>
 <?php include('partials/header.php'); ?>
 
-<div class="container">
-	<br>
-	<section>
-	<h4 class="light-blue-text">Un titre ?</h4>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi sed quam, quo consequuntur esse deleniti assumenda, nemo debitis velit. Ipsum nobis officia maiores alias itaque delectus consequuntur natus assumenda consequatur inventore, quo expedita iure nesciunt nemo qui ut impedit voluptatem, eos sunt pariatur molestiae labore modi molestias necessitatibus laudantium! Deleniti error maiores officiis tempore vero atque aut, officia illum odit sint expedita natus facilis earum voluptatem nihil molestias modi quas impedit facere excepturi blanditiis in dicta. Sit, distinctio qui. Minus ullam, officia cumque velit. Culpa reprehenderit quia eos maxime iusto temporibus maiores vero similique! Autem dolore asperiores animi, ipsam, totam sit obcaecati optio. Doloribus excepturi eligendi dolor deserunt maiores dolore optio laboriosam aperiam eos nam illo incidunt aspernatur facilis perferendis harum eius, similique quae ducimus architecto reiciendis quam eveniet. Tempore inventore, quibusdam quasi nemo, similique quos? Repudiandae nobis aperiam nulla dolore maiores nisi voluptates, expedita veniam, incidunt quos molestias optio.	
-	</section>
-	<br>
-</div>
+
+
 <div class="parallax-container">
-	<div class="parallax">
-		<img src="../src/">
-	</div>
+    <div class="parallax">
+        <img src="src/HL06.jpg">
+    </div>
 </div>
+
 <div class="container">
 	<br>
 	<section>
 		<div class="row">
-			<h4 class="light-blue-text">Un titre ?</h4>
+			<h4 class="light-blue-text"> Le TransIsland, votre nouveau transporteur</h4>
 			<div class="col s8 m8">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi sed quam, quo consequuntur esse deleniti assumenda, nemo debitis velit. Ipsum nobis officia maiores alias itaque delectus consequuntur natus assumenda consequatur inventore, quo expedita iure nesciunt nemo qui ut impedit voluptatem, eos sunt pariatur molestiae labore modi molestias necessitatibus laudantium! Deleniti error maiores officiis tempore vero atque aut, officia illum odit sint expedita natus facilis earum voluptatem nihil molestias modi quas impedit facere excepturi blanditiis in dicta. Sit, distinctio qui. Minus ullam, officia cumque velit. Culpa reprehenderit quia eos maxime iusto temporibus maiores vero similique! Autem dolore asperiores animi, ipsam, totam sit obcaecati optio. Doloribus excepturi eligendi dolor deserunt maiores dolore optio laboriosam aperiam eos nam illo incidunt aspernatur facilis perferendis harum eius, similique quae ducimus architecto reiciendis quam eveniet. Tempore inventore, quibusdam quasi nemo, similique quos? Repudiandae nobis aperiam nulla dolore maiores nisi voluptates, expedita veniam, incidunt quos molestias optio.
-			</div>
-			<div class="col s4 m4">
-	          <div class="card blue-grey darken-1">
-	            <div class="card-content white-text">
-	              <span class="card-title">Card Title</span>
-	              <p>I am a very simple card. I am good at containing small bits of information.
-	              I am convenient because I require little markup to use effectively.</p>
-	            </div>
-	          </div>
-	        </div>	
-		</div>
-	
-	</section>
-	<br>
-</div>
-<div class="parallax-container">
-	<div class="parallax">
-		<img src="http://lorempixel.com/1080/720/">
-	</div>
-</div>
+                <p> Montez à bord de capsules disposées dans un tube à air comprimé !
+                    <br/> Appréciez le silence produit par l'abscence de rail : c'est la technologie du magnétisme!
+                    <br/> Vous pouvez désormais voyager d’une île à l’autre de l’Océan Indien sous les mers et au dessus
+                    des terres, à une vitesse maximale de 2500 km/h. Il est certain que vos le temps de vos trajet sera
+                    considérablement réduit. Par exemple, pour un voyage "Réunion-Mayotte" vous ne mettrez plus que 7 minutes
+                    au lieu de 45 minutes en avion.
+
+                    <br/> <br/>
+                    Le TransIsland se veut être écologique :
+                    <br/>• il est auto suffisant : son énergie est fournie grâce aux panneaux solaires qui recouvrent les tubes et les stations.
+                    <br/>• étant silencieux et ayant des vibrations sont minimes voir inexistantes, et votre nouveau transport ne nuit pas à la santée de la faune et la flore avoisinate.
+                    <br/><br/>
+          Les avantages  </p>
+                    <ul>
+                        <li>Sécure</li>
+                        <li>Plus rapide</li>
+                        <li>Moins cher</li>
+                        <li>Plus pratique</li>
+                        <li>Resistant aux intempéries, tsunamis, tremblements de terre</li>
+                        <li>Durable</li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+        </div>
+
+<br>
+<br>
+<div class="container">
+    <br>
+    <section>
+        <div class="row">
+            <h4 class="light-blue-text"> Un service aussi pour les pros ! </h4>
+            <div class="col s8 m8">
+                <p> Nous avons aussi pensé aux pros :
+                    <br/> <br/>
+                    Chers entrepreneurs, <br/> Désormais, vos marchandises pourront elles aussi voyager ultra-rapidement.
+                    <br/>Nous vous mettons à disposition des frêts pour expédier et réceptionner vos biens.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="src/6.jpg">
+        </div>
+    </div>
+
+    <div class="container">
+    <br>
+    <section>
+        <div class="row">
+            <h4 class="light-blue-text"> Prêts à aider !  </h4>
+            <div class="col s8 m8">
+                <p>TransIsland permettra aux centres médicaux de réaliser des dons d'organes dans les meilleures conditions de temps.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="src/4.jpg">
+        </div>
+    </div>
+
 <!-- Back top Top -->
 <div class="fixed-action-btn back-to-top" style="bottom: 45px; right: 24px;display: none;">
 	<a class="btn-floating btn-large blue">
