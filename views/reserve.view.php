@@ -47,6 +47,9 @@
 			<p>
 				<strong>Souscrivez</strong> rapidement à un abonnement afin de pouvoir voyager sur notre réseau sans attendre, à un n'importe quel moment, quelque soit la météo !
 			</p>
+			<p>
+				Toutes les trentes minutes, une nouvelle capsule arrive et pourra vous transporter sur les îles avoisinnantes, en passant sous les eaux de l'Océan Indien.
+			</p>
 		</div>
 	</div>	
 </div>
