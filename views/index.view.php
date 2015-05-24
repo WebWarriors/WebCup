@@ -36,7 +36,7 @@ include('partials/header.php'); ?>
             <img src="src/HL03.jpg">
             <div class="caption center-align">
                 <h3>Les pros, c'est aussi pour vous</h3>
-                <h5 class="light grey-text text-lighten-3">Fini les longues attentes pour l'envoie et la réception de marchandises.</h5>
+                <h5 class="light grey-text text-lighten-3">Fini les longues attentes pour l'envoi et la réception de marchandises.</h5>
                 <a href="about.php#" class="waves-effect waves-light btn">En savoir plus</a>
                 <br /> <br /> <br /> <br /> <br /> <br />
                 <p>
