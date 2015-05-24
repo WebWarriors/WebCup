@@ -16,7 +16,7 @@ include('partials/header.php'); ?>
                         <div class="col s6 m4 l5 ">
                             <div class="card transparent darken-1">
                                 <div class="card-content white-text .right-align">
-                                    Des voyages grande vitesse <h5> partout l'océan indien </h5> à partir de <br /> <h4> <b> 5 IO <?= "(".money_converter_local(5, $_SESSION['money_code']).")";?> </b> </h4>
+                                    <h5> Tout l'océan Indien à porté de main à partir de </h5> <h4> <b> 5 io </h4> </b> </h4> <?= "(".money_converter_local(5, $_SESSION['money_code']).")";?>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ include('partials/header.php'); ?>
                         <div class="col s6 m4 l5 ">
                             <div class="card transparent darken-1">
                                 <div class="card-content white-text .right-align">
-                                    Découvrez nos offres avantageuses dès <br /> <h4> <b> 0,5 IO /KG </b> </h4> de marchandise ! <?= "(".money_converter_local(0.5, $_SESSION['money_code']).")";?>
+                                    Découvrez nos offres avantageuses dès <br /> <h4> <b> 0,5 io /KG </b> </h4> de marchandise ! <?= "(".money_converter_local(0.5, $_SESSION['money_code']).")";?>
                                 </div>
                             </div>
                         </div>
