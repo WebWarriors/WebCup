@@ -71,7 +71,7 @@ if(!function_exists('update_user_by_id')){
             return true;
         else
             return false;
-=======
+
 function  update_user_by_id($update, $obj = ""){
     $db = connexion_bdd();
     if(empty($obj)) {
@@ -96,7 +96,6 @@ function requete($array) {
         $prepare[] = " ?";
         $infos[] = $array[key($array)];
         next($array);
->>>>>>> origin/#Dev
     }
 }
 
