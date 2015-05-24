@@ -1,5 +1,5 @@
-<?php $title = "NOM DU PROJET" ?>
 <?php include('includes/constants.php'); ?>
+<?php $title = WEBSITE_NAME ?>
 <?php include('partials/header.php'); ?>
 
 
