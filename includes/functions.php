@@ -20,11 +20,44 @@ if(!function_exists('island_id_name')){
                     $id = key($island_tab);
                 }
                 next($island_tab);
+function money_converter_local($io, $local_currency){
+
+    $currency_changes = array(
+        "EUR" => 0.67,
+        "SCR" => 9.93,
+        "KMF" => 329.61,
+        "MUR" => 25.82,
+        "MGA" => 2344.28
+    );
+
+    $local_change = strtr($local_currency, $currency_changes);
+    $amount = $io*$local_change;
+    return $amount." ".$local_currency;
+}
+
+function island_id_name($mixed)
+{
+    $island_tab = array(
+        1 => "Grande Comore",
+        2 => "Madagascar",
+        3 => "Maurice",
+        4 => "Mayotte",
+        5 => "Réunion",
+        6 => "Rodrigues",
+        7 => "Seychelles"
+    );
+    if (ctype_digit($mixed)) {
+        return strtr($mixed, $island_tab);
+    }else{
+        while ($island = current($island_tab)) {
+            if ($island == $mixed) {
+                $id = key($island_tab);
             }
             return $id;
         }
     }
 }
+
 
 if(!function_exists('update_user_by_id')){
     function  update_user_by_id($update){
@@ -38,6 +71,32 @@ if(!function_exists('update_user_by_id')){
             return true;
         else
             return false;
+=======
+function  update_user_by_id($update, $obj = ""){
+    $db = connexion_bdd();
+    if(empty($obj)) {
+        if (empty($update['island']))
+            $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `phone` = :phone WHERE `id` = :id";
+        else
+            $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `island` = :island, `phone` = :phone WHERE `id` = :id";
+        $q = $db->prepare($sql);
+    }else{
+        $q = $db->prepare("UPDATE `users` SET `passwd` = :passwd WHERE `id` = :id");
+    }
+
+    if ($q->execute($update))
+        return true;
+    else
+        return false;
+}
+
+function requete($array) {
+    while(current($array)) {
+        $keys[] = "`".key($array)."`";
+        $prepare[] = " ?";
+        $infos[] = $array[key($array)];
+        next($array);
+>>>>>>> origin/#Dev
     }
 }
 
