@@ -3,7 +3,7 @@ include('includes/constants.php');
 include('partials/header.php'); ?>
 
 <div class="row">
-    <div class="col s12 m6">
+    <div class="col s6 m3">
         <div class="card blue-grey darken-1">
             <div class="card-content white-text">
                 <span class="card-title">Vos informations</span>
@@ -11,17 +11,40 @@ include('partials/header.php'); ?>
                     <li> Prénom : <?= $_SESSION['f_name'];?> </li>
                     <li> Nom : <?= $_SESSION['l_name'];?> </li>
                     <li> Genre : <?= $gender;?> </li>
-                <?php if($edit): ?>
+                <?php if(!empty($_POST['edit'])): ?>
                     <form method="POST" action="account.php" >
-                    <li> Votre île de résidence :
-                        <select name="gender" class="browser-default" value="<?php echo get_input("gender"); ?>">
-                            <option value="" disabled selected>Sexe</option>
-                            <option value="1">Femme</option>
-                            <option value="2">Homme</option>
-                            <option value="3">Autre</option>
-                        </select></li>
-                    <li> Téléphone : <input name="phone" id="phone" type="tel" class="validate" value="<?= $phone; ?>"> </li>
+                     <div class="input-field col s12">
+                        <li> Email :
+                            <input name="mail" id="mail" type="email" class="validate" value="<?= $mail; ?>">
+                        </li>
+                    </div>
+                    <div class="input-field col s12">
+                        <li> Adresse :
+                            <input name="address" id="address" type="text" class="validate" value="<?= $address; ?>">
+                        </li>
+                    </div>
+                    <li> <div class="row">
+                            Votre île de résidence :
+                            <select name="island" class="browser-default card blue-grey darken-1" >
+                                <option class="white-text" value="<?= $island_id; ?>" disabled selected><?= $island; ?></option>
+                                <option class="white-text" value="1">Grande Comore</option>
+                                <option class="white-text" value="2">Madagascar</option>
+                                <option class="white-text" value="3">Maurice</option>
+                                <option class="white-text" value="4">Mayotte</option>
+                                <option class="white-text" value="5">Réunion</option>
+                                <option class="white-text" value="6">Rodrigues</option>
+                                <option class="white-text" value="7">Seychelles</option>
+                            </select>
+                            </div>
+                    </li>
+                    <div class="input-field col s12">
+                        <li> Téléphone :
+                                    <input name="phone" id="phone" type="tel" class="validate" value="<?= $phone; ?>">
+                        </li>
+                    </div>
                 <?php else: ?>
+                    <li> Adresse email : <?= $mail; ?></li>
+                    <li> Adresse : <?= $address; ?></li>
                     <li> Votre île de résidence : <?= $island; ?> </li>
                     <li> Téléphone : <?= $phone; ?> </li>
                 <?php endif; ?>
@@ -29,12 +52,22 @@ include('partials/header.php'); ?>
 
             </div>
             <div class="card-action">
-                <?php if($edit): ?>
-                    <button  type="submit" name="edit_infos">Enregistrer mes infos</form>
+                <?php if(!empty($_POST['edit'])): ?>
+                    <button  type="submit" name="edit_infos" value="edit">Enregistrer mes infos</form>
                 <?php else: ?>
-                    <form method="POST" action="account.php" ><button  type="submit" name="edit">Modifier mes infos</form>
+                    <form method="POST" action="account.php" ><button  type="submit" name="edit" value="edit">Modifier mes infos</form>
                 <?php endif; ?>
             </div>
+            <?php if(!empty($errors)): ?>
+                <div class="col s12 m12">
+                    <br>
+                    <div class="card red darken-1">
+                        <div class="card-content white-text valign-wrapper">
+                            <i class="small mdi-alert-error"> </i ><strong class="valign"><?php echo implode("<br/>",$errors); ?></strong>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>

@@ -1,5 +1,55 @@
 <?php
 
+function island_id_name($mixed)
+{
+    $island_tab = array(
+        1 => "Grande Comore",
+        2 => "Madagascar",
+        3 => "Maurice",
+        4 => "Mayotte",
+        5 => "Réunion",
+        6 => "Rodrigues",
+        7 => "Seychelles"
+    );
+    if (ctype_digit($mixed)) {
+        return strtr($mixed, $island_tab);
+    }else{
+        while ($island = current($island_tab)) {
+            if ($island == $mixed) {
+                $id = key($island_tab);
+            }
+            next($island_tab);
+        }
+        return $id;
+    }
+}
+
+function  update_user_by_id($update){
+    if(empty($update['island']))
+        $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `phone` = :phone WHERE `id` = :id";
+    else
+        $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `island` = :island, `phone` = :phone WHERE `id` = :id";
+    $db = connexion_bdd();
+    $q = $db->prepare($sql);
+    if($q->execute($update))
+        return true;
+    else
+        return false;
+}
+
+function requete($array) {
+    while(current($array)) {
+        $keys[] = "`".key($array)."`";
+        $prepare[] = " ?";
+        $infos[] = $array[key($array)];
+        next($array);
+    }
+    $champs = implode(", ", $keys);
+    $prepa = implode(", ", $prepare);
+    $donnees = $infos;
+    return array("champs" => $champs, "prepa" => $prepa, "donnees" => $donnees);
+}
+
 if(!function_exists('find_user_by_id')){
     function find_user_by_id($key){
         $db = connexion_bdd();
@@ -138,24 +188,28 @@ function user_login($user_mail, $passwd){
     }
     sleep(1);
     if($answer){
-        $money_code = array(
-            "Grande Comore" => "KMF",
-            "Madagascar" => "MGA",
-            "Maurice" => "MUR",
-            "Mayotte" => "EUR",
-            "Réunion" => "EUR",
-            "Rodrigues" => "MUR",
-            "Seychelles" => "SCR"
-        );
         $_SESSION['user_id'] = $answer[0]['id'];
         $_SESSION['f_name'] = $answer[0]['f_name'];
         $_SESSION['l_name'] = $answer[0]['l_name'];
         $_SESSION['mail'] = $answer[0]['mail'];
-        $_SESSION['money_code'] = strtr($answer[0]['island'], $money_code);
+        $_SESSION['money_code'] = country_to_curency($answer[0]['island']);
         return TRUE;
     }else{
         return FALSE;
     }
+}
+
+function country_to_curency($country){
+    $money_code = array(
+        "Grande Comore" => "KMF",
+        "Madagascar" => "MGA",
+        "Maurice" => "MUR",
+        "Mayotte" => "EUR",
+        "Réunion" => "EUR",
+        "Rodrigues" => "MUR",
+        "Seychelles" => "SCR"
+    );
+    return strtr($country, $money_code);
 }
 
 if(!function_exists('connexion_bdd')){
