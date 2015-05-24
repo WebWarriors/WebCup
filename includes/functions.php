@@ -1,53 +1,44 @@
 <?php
 
-function island_id_name($mixed)
-{
-    $island_tab = array(
-        1 => "Grande Comore",
-        2 => "Madagascar",
-        3 => "Maurice",
-        4 => "Mayotte",
-        5 => "Réunion",
-        6 => "Rodrigues",
-        7 => "Seychelles"
-    );
-    if (ctype_digit($mixed)) {
-        return strtr($mixed, $island_tab);
-    }else{
-        while ($island = current($island_tab)) {
-            if ($island == $mixed) {
-                $id = key($island_tab);
+if(!function_exists('island_id_name')){
+    function island_id_name($mixed)
+    {
+        $island_tab = array(
+            1 => "Grande Comore",
+            2 => "Madagascar",
+            3 => "Maurice",
+            4 => "Mayotte",
+            5 => "Réunion",
+            6 => "Rodrigues",
+            7 => "Seychelles"
+        );
+        if (ctype_digit($mixed)) {
+            return strtr($mixed, $island_tab);
+        }else{
+            while ($island = current($island_tab)) {
+                if ($island == $mixed) {
+                    $id = key($island_tab);
+                }
+                next($island_tab);
             }
-            next($island_tab);
+            return $id;
         }
-        return $id;
     }
 }
 
-function  update_user_by_id($update){
-    if(empty($update['island']))
-        $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `phone` = :phone WHERE `id` = :id";
-    else
-        $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `island` = :island, `phone` = :phone WHERE `id` = :id";
-    $db = connexion_bdd();
-    $q = $db->prepare($sql);
-    if($q->execute($update))
-        return true;
-    else
-        return false;
-}
-
-function requete($array) {
-    while(current($array)) {
-        $keys[] = "`".key($array)."`";
-        $prepare[] = " ?";
-        $infos[] = $array[key($array)];
-        next($array);
+if(!function_exists('update_user_by_id')){
+    function  update_user_by_id($update){
+        if(empty($update['island']))
+            $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `phone` = :phone WHERE `id` = :id";
+        else
+            $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `island` = :island, `phone` = :phone WHERE `id` = :id";
+        $db = connexion_bdd();
+        $q = $db->prepare($sql);
+        if($q->execute($update))
+            return true;
+        else
+            return false;
     }
-    $champs = implode(", ", $keys);
-    $prepa = implode(", ", $prepare);
-    $donnees = $infos;
-    return array("champs" => $champs, "prepa" => $prepa, "donnees" => $donnees);
 }
 
 if(!function_exists('find_user_by_id')){
@@ -81,43 +72,53 @@ if(!function_exists('is_logged_in')){
         return (!empty($_SESSION['user_id']));
     }
 }
-function user_logout($page = "index.php"){
-    session_start ();
-    session_unset ();
-    session_destroy ();
-    redirect($page);
-}
-
-function clear_input_data(){
-    if(isset($_SESSION['input'])){
-        $_SESSION['input'] = [];
+if(!function_exists('user_logout')){
+    function user_logout($page = "index.php"){
+        session_start ();
+        session_unset ();
+        session_destroy ();
+        redirect($page);
     }
 }
 
-function redirect_intent_or($default_url){
-    if($_SESSION['page']){
-        $url = $_SESSION['page'];
-        $_SESSION['page'] = null;
-    }else{
-        $url = $default_url;
-    }
-    redirect($url);
-}
-
-function not_empty($fields = []){
-    if(count($fields) != 0){
-        foreach($fields as $field){
-            if(empty($_POST[$field]) || trim($_POST[$field]) == ""){
-                return false;
-            }
+if(!function_exists('clear_input_data')){
+    function clear_input_data(){
+        if(isset($_SESSION['input'])){
+            $_SESSION['input'] = [];
         }
-        return true;
     }
 }
 
-function redirect($page){
-    header('Location:'.$page);
-    exit();
+if(!function_exists('redirect_intent_or')){
+    function redirect_intent_or($default_url){
+        if($_SESSION['page']){
+            $url = $_SESSION['page'];
+            $_SESSION['page'] = null;
+        }else{
+            $url = $default_url;
+        }
+        redirect($url);
+    }
+}
+
+if(!function_exists('not_empty')){
+    function not_empty($fields = []){
+        if(count($fields) != 0){
+            foreach($fields as $field){
+                if(empty($_POST[$field]) || trim($_POST[$field]) == ""){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+}
+
+if(!function_exists('redirect')){
+    function redirect($page){
+        header('Location:'.$page);
+        exit();
+    }
 }
 
 function set_active($file, $class = "active"){

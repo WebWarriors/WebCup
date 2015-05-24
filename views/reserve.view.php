@@ -18,7 +18,7 @@
 			<br>
 			<h4 class="light-blue-text">S'abonner à <?= WEBSITE_NAME ?></h4>
 			<div class="row">
-				<form method="POST" action="login.php">
+				<form method="POST" action="reserve.php">
                     <div class="row valign-wrapper">
                         <select name="island" id="listing" class="browser-default col s7 m7 valign" value="<?php echo get_input("island"); ?>" onchange="priceText();">
                             <option value="0" disabled selected>Durée de l'abonnement</option>

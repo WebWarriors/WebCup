@@ -1,6 +1,5 @@
 <?php $title = "NOM DU PROJET" ?>
 <?php include('includes/constants.php'); ?>
-<?php include('includes/functions.php'); ?>
 <?php include('partials/header.php'); ?>
 
 
@@ -41,10 +40,7 @@
                 </div>
             </div>
     </section>
-        </div>
-
-<br>
-<br>
+</div>
 <div class="container">
     <br>
     <section>
@@ -59,6 +55,7 @@
             </div>
         </div>
     </section>
+</div>
 
     <div class="parallax-container">
         <div class="parallax">
@@ -66,8 +63,9 @@
         </div>
     </div>
 
-    <div class="container">
     <br>
+
+<div class="container">
     <section>
         <div class="row">
             <h4 class="light-blue-text"> Prêts à aider !  </h4>
@@ -77,12 +75,13 @@
             </div>
         </div>
     </section>
-
+</div>
     <div class="parallax-container">
         <div class="parallax">
             <img src="src/4.jpg">
         </div>
     </div>
+
 
 <!-- Back top Top -->
 <div class="fixed-action-btn back-to-top" style="bottom: 45px; right: 24px;display: none;">
