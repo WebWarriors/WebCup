@@ -10,12 +10,11 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" style="text-align: justify;">
 	<br>
 	<section>
 		<div class="row">
 			<h4 class="light-blue-text"> Le TransIsland, votre nouveau transporteur</h4>
-			<div class="col s6 m12">
                 <p> Montez à bord de capsules disposées dans un tube à air comprimé !
                     <br/> Appréciez le silence produit par l'abscence de rail : c'est la technologie du magnétisme!
                     <br/> Vous pouvez désormais voyager d’une île à l’autre de l’Océan Indien sous les mers et au dessus
@@ -26,34 +25,31 @@
                     Un véritable moyen de se déplacer rapidement et simplement ! Pas de procédures pénalisantes, vous entrez, et hop, vous voyagez !
 
                     <br/> <br/>
-                    Le TransIsland se veut être écologique :
+                    <b> <u>Le TransIsland se veut être écologique</u> </b>
                     <br/>• il est auto suffisant : son énergie est fournie grâce aux panneaux solaires qui recouvrent les tubes terrestres et les stations.
                     <br/>• silencieux et émettant peu de vibrations, votre nouveau transport ne nuit pas à la santé de la faune et la flore avoisinante.
                     <br/><br/>
 
-                    Il est  </p>
+                    <b> <u>Il est </u> </b>
                     <ul>
-                        <li>Sécurisé : Aucun risques de collisions, des voies réservées, des lignes minutieusement étudiées</li>
-                        <li>Rapide et innovant : Observez les merveilles des fond marins lors de votre traversée !</li>
-                        <li>Peu cher : Mais tout aussi confortable, professionels, vous aprécierez l'accès à tous vos services terrestres, familles vous aimerez nos box d'i</li>
-                        <li>Plus pratique</li>
-                        <li>Resistant aux intempéries, tsunamis, tremblements de terre</li>
-                        <li>Durable</li>
+                        <li><u>Sécurisé :</u> Aucun risques de collisions, des voies réservées, des lignes minutieusement étudiées</li>
+                        <li><u>Rapide et innovant :</u> Observez les merveilles des fond marins lors de votre traversée !</li>
+                        <li><u>Peu cher :</u> Mais tout aussi confortable, professionels, vous aprécierez l'accès à tous vos services terrestres, familles vous aimerez nos boxs d'isolement et le jardin d'enfant, pressé, vous serez heureux de pourvoir voyager sans vous faire embêter.</li>
+                        <li><u>Plus pratique :</u> Pas fouille, pas de tiquets, de gadgets ou autres choses emcombrantes, vous n'avez cas poser votre bras ! (Puce UUH3 obligatoire dans tout les états de classe 3 depuis 2039.)  </li>
+                        <li>A l'épreuve de la puissance de l'homme nature, agrée VTR799. </li>
                     </ul>
-                </div>
-            </div>
+
+        </div>
     </section>
 </div>
-<div class="container">
-    <br>
+<div class="container" style="text-align: justify;">
     <section>
         <div class="row">
-            <h4 class="light-blue-text"> Un service aussi pour les pros ! </h4>
+            <h4 class="light-blue-text"> Un service aussi pour les professionels ! </h4>
             <div class="col s8 m8">
-                <p> Nous avons aussi pensé aux pros :
-                    <br/> <br/>
+                <p> <br/> <br/>
                     Chers entrepreneurs, <br/> Désormais, vos marchandises pourront elles aussi voyager ultra-rapidement.
-                    <br/>Nous vous mettons à disposition des frêts pour expédier et réceptionner vos biens.
+                    <br/>Nous vous mettons à disposition des frêts pour expédier et réceptionner toutes vos cargaisons.
                 </p>
             </div>
         </div>
@@ -68,12 +64,12 @@
 
     <br>
 
-<div class="container">
+<div class="container" style="text-align: justify;">
     <section>
         <div class="row">
             <h4 class="light-blue-text"> Prêts à aider !  </h4>
             <div class="col s8 m8">
-                <p>TransIsland permettra aux centres médicaux de réaliser des dons d'organes dans les meilleures conditions de temps.
+                <p>TransIsland c'est engagé auprés des centres médicaux de l'Océan Indien en leur garantisssant un accès prioritaire, facilitant le transport d'organes, de malades, et d'expériences.
                 </p>
             </div>
         </div>
