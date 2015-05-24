@@ -55,7 +55,7 @@ include('partials/header.php'); ?>
             </div>
         </li>
         <li>
-            <img src="src/H24.JPG">
+            <img src="src/2.JPG">
             <div class="caption center-align">
                 <h3>Un convoi toutes les 30 minutes</h3>
                 <h5 class="light grey-text text-lighten-3">On vous offre l'ultra disponibilité!</h5>
