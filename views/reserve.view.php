@@ -35,7 +35,7 @@
                         </div>
 					</div>
 					<div class="row">
-                        <button class="btn waves-effect waves-light" type="submit" name="valid">Valider
+                        <button class="btn waves-effect waves-light" type="submit" name="valid">Valider</button>
                             <i class="mdi-content-send right"></i>
                         </button>
                     </div>

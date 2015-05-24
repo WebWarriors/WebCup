@@ -1,28 +1,13 @@
 <?php
 
-if(!function_exists('island_id_name')){
-    function island_id_name($mixed)
-    {
-        $island_tab = array(
-            1 => "Grande Comore",
-            2 => "Madagascar",
-            3 => "Maurice",
-            4 => "Mayotte",
-            5 => "Réunion",
-            6 => "Rodrigues",
-            7 => "Seychelles"
-        );
-        if (ctype_digit($mixed)) {
-            return strtr($mixed, $island_tab);
-        }else{
-            while ($island = current($island_tab)) {
-                if ($island == $mixed) {
-                    $id = key($island_tab);
-                }
-                next($island_tab);
-            }
-        }
-        
+function return_subscriptions(){
+    $db = connexion_bdd();
+    foreach($db->query("SELECT * FROM `subscription`") as $data){
+        $subs[] = $data;
+    }
+    return $subs;
+}
+
 function money_converter_local($io, $local_currency){
 
     $currency_changes = array(
@@ -61,18 +46,26 @@ function island_id_name($mixed){
 }
 
 
-if(!function_exists('update_user_by_id')){
-    function  update_user_by_id($update){
-        if(empty($update['island']))
-            $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `phone` = :phone WHERE `id` = :id";
-        else
-            $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `island` = :island, `phone` = :phone WHERE `id` = :id";
+if(!function_exists('update_user_by_id')) {
+    function  update_user_by_id($update, $obj = "")
+    {
         $db = connexion_bdd();
-        $q = $db->prepare($sql);
-        if($q->execute($update))
+        if (empty($obj)) {
+            if (empty($update['island']))
+                $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `phone` = :phone WHERE `id` = :id";
+            else
+                $sql = "UPDATE `users` SET `mail` = :mail, `address` = :address, `island` = :island, `phone` = :phone WHERE `id` = :id";
+            $q = $db->prepare($sql);
+        } else {
+            $q = $db->prepare("UPDATE `users` SET `passwd` = :passwd WHERE `id` = :id");
+        }
+
+        if ($q->execute($update))
             return true;
         else
             return false;
+    }
+}
 
 function  update_user_by_id($update, $obj = ""){
     $db = connexion_bdd();
@@ -170,6 +163,8 @@ if(!function_exists('not_empty')){
                 }
             }
             return true;
+        }else{
+            return false;
         }
     }
 }

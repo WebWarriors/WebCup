@@ -1,3 +1,16 @@
+<?php
+if(!empty($_GET['c'])){
+    $array = array(
+        "eu" => "EUR",
+        "sc" => "SCR",
+        "km" => "KMF",
+        "mu" => "MUR",
+        "mg" => "MGA"
+    );
+    $_SESSION['money_code'] = strtr($_GET['c'], $array);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>

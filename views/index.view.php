@@ -11,6 +11,17 @@ include('partials/header.php'); ?>
             <div class="caption center-align">
                 <h3>Découvrez le TransIslands</h3>
                 <h5 class="light grey-text text-lighten-3">Un mode de transport révolutionaire !</h5>
+                <div class="row">
+                    <div class="offset-s9 col s12">
+                        <div class="col s6 m4 l5 ">
+                            <div class="card transparent darken-1">
+                                <div class="card-content white-text .right-align">
+                                    Des voyages grande vitesse <h5> partout l'océan indien </h5> à partir de <br /> <h4> <b> 5 IO <?= "(".money_converter_local(5, $_SESSION['money_code']).")";?> </b> </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </li>
         <li>
@@ -27,6 +38,20 @@ include('partials/header.php'); ?>
                 <h3>Les pros, c'est aussi pour vous</h3>
                 <h5 class="light grey-text text-lighten-3">Fini les longues attentes pour l'envoie et la réception de marchandises.</h5>
                 <a href="about.php#" class="waves-effect waves-light btn">En savoir plus</a>
+                <br /> <br /> <br /> <br /> <br /> <br />
+                <p>
+                <div class="row">
+                    <div class="offset-s9 col s12">
+                        <div class="col s6 m4 l5 ">
+                            <div class="card transparent darken-1">
+                                <div class="card-content white-text .right-align">
+                                    Découvrez nos offres avantageuses dès <br /> <h4> <b> 0,5 IO /KG </b> </h4> de marchandise ! <?= "(".money_converter_local(0.5, $_SESSION['money_code']).")";?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </p>
             </div>
         </li>
         <
