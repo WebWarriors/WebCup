@@ -54,7 +54,6 @@ include('partials/header.php'); ?>
                 </p>
             </div>
         </li>
-        <
         <li>
             <img src="src/H24.JPG">
             <div class="caption center-align">
@@ -62,7 +61,12 @@ include('partials/header.php'); ?>
                 <h5 class="light grey-text text-lighten-3">On vous offre l'ultra disponibilité!</h5>
             </div>
         </li>
-        <
+        <li>
+            <img src="src/7.jpg">
+            <div class="caption center-align">
+             <a href="about.php#" class="waves-effect waves-light btn">Fini les longs trajets !</a>
+            </div>
+        </li>
     </ul>
 </div>
 <!--Import jQuery before materialize.js-->
