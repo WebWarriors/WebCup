@@ -4,7 +4,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col s7">
+		<div class="col s7 m5">
 			<?php if(!empty($errors)): ?>
             	<div class="col s12 m12">
             		<br>
@@ -35,12 +35,18 @@
                         </div>
 					</div>
 					<div class="row">
-                        <button class="btn waves-effect waves-light" type="submit" name="valid">Valider</button>
+                        <button class="btn waves-effect waves-light" type="submit" name="valid">Valider
                             <i class="mdi-content-send right"></i>
                         </button>
                     </div>
 				</form>
 			</div>
+		</div>
+		<div class="col s5 m5">
+			<h3>Parcourez l'Océan Indien en <strong>moins de 2 heures 30 minutes</strong> !</h3>
+			<p>
+				<strong>Souscrivez</strong> rapidement à un abonnement afin de pouvoir voyager sur notre réseau sans attendre, à un n'importe quel moment, quelque soit la météo !
+			</p>
 		</div>
 	</div>	
 </div>
