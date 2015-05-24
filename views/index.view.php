@@ -64,7 +64,7 @@ include('partials/header.php'); ?>
         <li>
             <img src="src/7.jpg">
             <div class="caption center-align">
-             <a href="about.php#" class="waves-effect waves-light btn">Fini les longs trajets !</a>
+             <a href="map.php#" class="waves-effect waves-light btn">Fini les longs trajets !</a>
             </div>
         </li>
     </ul>
