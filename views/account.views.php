@@ -74,8 +74,8 @@ include('partials/header.php'); ?>
                 <?php elseif(!empty($_POST['edit_p'])): ?>
                     <button  type="submit" name="edit_passwd" value="edit">Modifier</button></form>
                 <?php else: ?>
-                    <form method="POST" action="account.php" ><button  type="submit" name="edit" value="edit">Modifier mes infos</button></form>
-                    <form method="POST" action="account.php" ><button  type="submit" name="edit_p" value="edit">Changer de mot de passe</button></form>
+                    &nbsp; &nbsp; &nbsp; <form method="POST" action="account.php" ><button class="waves-effect waves-light btn" type="submit" name="edit" value="edit">Modifier mes infos</button></form>
+                    <form method="POST" action="account.php" ><button class="waves-effect waves-light btn" type="submit" name="edit_p" value="edit">Changer de mot de passe</button></form>
                 <?php endif; ?>
             </div>
             <?php if(!empty($errors)): ?>

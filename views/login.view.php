@@ -100,7 +100,7 @@
                     <br>
                     <div class="card red darken-1">
                         <div class="card-content white-text valign-wrapper">
-                            <i class="small mdi-alert-error"> </i ><strong class="valign"><?php echo implode("<br/>",$error); ?></strong>
+                            <i class="small mdi-alert-error"> </i ><strong class="valign"><?php echo $error; ?></strong>
                         </div>
                     </div>
                 </div>

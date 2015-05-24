@@ -13,7 +13,7 @@ if(isset($_POST['login'])){
             $error = "Adresse email ou mot de passe incorrect.";
         }
     }else{
-        $error = "Veuillez remplire tous les champs.";
+        $error = "Veuillez remplir tous les champs.";
     }
 }
 

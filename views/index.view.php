@@ -16,7 +16,7 @@ include('partials/header.php'); ?>
                         <div class="col s6 m4 l5 ">
                             <div class="card transparent darken-1">
                                 <div class="card-content white-text .right-align">
-                                    <h5> Tout l'océan Indien à portée de main à partir de </h5> <h4> <b> 5 io </h4> </b> </h4> <?= "(".money_converter_local(5, $_SESSION['money_code']).")";?>
+                                    <h5> Tout l'océan Indien à portée de main dès </h5> <h4> <b> 5 io </h4> </b> </h4> <?= "(".money_converter_local(5, $_SESSION['money_code']).")";?>
                                 </div>
                             </div>
                         </div>
