@@ -1,4 +1,6 @@
 <?php
+if(empty($_SESSION['money_code']))
+    $_SESSION['money_code'] = "EUR";
 if(!empty($_GET['c'])){
     $array = array(
         "eu" => "EUR",
