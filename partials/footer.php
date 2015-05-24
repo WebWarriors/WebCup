@@ -16,7 +16,7 @@
           	</div>
           	<div class="footer-copyright">
             	<div class="container">
-            		© 2050 Copyright Text
+            		© 2050 Copyright
             	</div>
         	</div>
         </footer>
