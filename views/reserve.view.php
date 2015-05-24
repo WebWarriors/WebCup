@@ -49,18 +49,20 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/materialize.js"></script>
 
-    <script>
+    <script type="text/javascript">
+
+        var data = ["<?php echo implode('" ,"', $local_currency); ?>"];
     	function priceText(){
 		    sel = document.getElementById('listing');
 		    var price = document.getElementById('price');
 		    if ( sel.options[sel.selectedIndex].value == "1" ) {
-     			price.innerHTML = "15 IO";
+     			price.innerHTML = data[0];
 		    }
 		    else if ( sel.options[sel.selectedIndex].value == "2" ) {
-		    	price.innerHTML = "75 IO";
+		    	price.innerHTML = data[1];
 		    }
 		    else if ( sel.options[sel.selectedIndex].value == "3" ) {
-		    	price.innerHTML = "135 IO";
+		    	price.innerHTML = data[2];
 		    }
 		}
         $(document).ready(function(){

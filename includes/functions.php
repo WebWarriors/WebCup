@@ -38,8 +38,7 @@ function money_converter_local($io, $local_currency){
     return $amount." ".$local_currency;
 }
 
-function island_id_name($mixed)
-{
+function island_id_name($mixed){
     $island_tab = array(
         1 => "Grande Comore",
         2 => "Madagascar",
