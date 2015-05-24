@@ -20,6 +20,9 @@ if(!function_exists('island_id_name')){
                     $id = key($island_tab);
                 }
                 next($island_tab);
+            }
+        }
+        
 function money_converter_local($io, $local_currency){
 
     $currency_changes = array(
